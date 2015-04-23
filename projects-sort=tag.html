@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <!-- BC_OBNW -->
+<head>
+<title>Projects</title>
+<link href="StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" />
+<script type="text/javascript">var jslang='EN';</script>
+<link href="stylesheets/styles.css" type="text/css" rel="stylesheet" />
+<link href="stylesheets/photoswipe.css" type="text/css" rel="stylesheet" />
+<link href="stylesheets/gallery.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="stylesheets/jquery.fancybox-v=2.0.5.css" type="text/css" media="screen" />
+<script type="text/javascript" src="../use.typekit.com/thh3cpj.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript" src="javascripts/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="javascripts/klass.min.js"></script>
+<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/code.photoswipe.jquery-3.0.4.js"></script>
+<script type="text/javascript" src="javascripts/jquery.fancybox.pack-v=2.0.5.js"></script>
+<script type="text/javascript" src="javascripts/taffy-min.js"></script>
+<meta charset="utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="CatalystStyles/Box-vs=b1619.r457034-phase1.css" type="text/css" media="screen" />
+<script type="text/javascript" src="CatalystScripts/Java_Box-vs=b1619.r457034-phase1.js"></script>
+</head>
+<body class="gallerypagewrap">
+
+    
+        <div id="header">
+<ul id="nav">
+    <li class="colorLink" id="navHome"><a href="index.html" class="first-nav">RURAL STUDIO</a></li>
+    <li id="navAbout"><a href="about.html">About</a></li>
+    <li id="navPeople"><a href="people.html">People</a></li>
+    <li id="navProcess"><a href="process.html">Process</a></li>
+    <li id="navPrograms"><a href="programs.html">Programs</a></li>
+    <li id="navProjects"><a href="projects.html">Projects</a></li>
+    <li id="navConnect"><a href="connect.html">Connect</a></li>
+    <li id="navGetInvolved"><a href="get-involved.html">Get Involved</a></li>
+    <li id="navDonate"><a href="http://supportruralstudio.com" target="_blank">Donate</a></li>
+    <!--
+    <li id="navInitiatives"><a href="/initiatives.html">Initiatives</a></li>
+    <li id="navHandCraft"><a href="/hand-craft.html">Hand Craft</a></li>
+    <li id="navBlogs"><a href="http://ruralstudioblogs.org/">Blogs</a></li>
+-->
+    <li id="navRs20"><a href="programs/rs20-20th-anniversary.html">RS20</a></li>
+</ul>
+<ul id="nav-right">
+    <li id="navAuburn"><a href="http://www.auburn.edu/">AUBURN UNIVERSITY</a></li>
+</ul>
+</div>
+        <!-- Project page template -->
+        <script>
+    	
+    	var BCWebAppProject = {};
+
+		BCWebAppProject.allprojects = TAFFY([
+			/* project list
+			 json for project: url, title, thumb, location, type, year, tag (related)
+				{
+					"url":"http://ruralstudio.businesscatalyst.com/student-projects/akron-boys-girls-club", 
+					"title":"Akron Boys &amp; Girls Club", 
+					"thumb":"/project-images/akron-boys-and-girls-club/96010-processed.jpg", 
+					"location":"Akron AL", 
+					"type":"Municipal", 
+					"year":"2012", 
+					"tag":"Lamella,Wood"
+				},
+*/
+			{"url":"http://www.ruralstudio.org/projects/20kv1-elizabeths-house", "title":"20K v01 Elizabeth's House", "thumb":"/project-images/20Kv1-elizabeths-house/2005_20Kv1-Elizabeth's-House_96980.jpg", "location":"Hale County AL", "type":"Residential", "year":"2005", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v2-franks-house", "title":"20K v02 Frank's House", "thumb":"/project-images/20Kv2-franks-house/2006_20Kv2_Frank's-House_90028c.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2006", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v3-32k-house", "title":"20K v03 32K House", "thumb":"/project-images/20Kv3-32K house/2007_20Kv3_32K_TH_90290.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2007", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20kv4-pattern-book-house", "title":"20K v04 Pattern Book House", "thumb":"/project-images/20Kv4-pattern-book-house/2008_20Kv4_TC_080607_drew-04.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2008", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20kv5-loft-house", "title":"20K v05 Loft House", "thumb":"/project-images/20Kv5-loft-house/96027.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2008", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20kv6-roundwood-house", "title":"20K v06 Roundwood House", "thumb":"/project-images/20Kv6-roundwood-house/2008_20Kv6_TH_96018.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2008", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20kv7-bridge-house", "title":"20K v07 Bridge House", "thumb":"/project-images/20Kv7-bridge-house/96024.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2008", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v8-daves-house", "title":"20K v08 Dave’s House", "thumb":"/project-images/20Kv8-daves-house/2009_20Kv8_TH_96979.jpg", "location":"Newbern AL", "type":"Residential", "year":"2009", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v9-macs-house", "title":"20K v09 Mac's House", "thumb":"/project-images/20Kv9-macs-house/2009_20Kv9_TH106013.jpg", "location":"Faunsdale AL", "type":"Residential", "year":"2010", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v10-joannes-house", "title":"20K v10 Joanne's House", "thumb":"/project-images/20Kv10-joannes-house/2011_20Kv10-Joannes-House_TH106008a.jpg", "location":"Faunsdale AL", "type":"Residential", "year":"2011", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v11-turners-house", "title":"20K v11 Turner's House", "thumb":"/project-images/20Kv11-turners-house/2012_20Kv11_TH121019_RuralBook_P1o0098.jpg", "location":"Faunsdale AL", "type":"Residential", "year":"2012", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v12-eddies-house", "title":"20K v12 Eddie's House", "thumb":"/project-images/20Kv12-eddies-house/2013_20Kv12_EddiesHouse_TH130915_RS__P10036.jpg", "location":"Faunsdale AL", "type":"Residential", "year":"2013", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20kv13-sylvias-house", "title":"20K v13 Sylvia's House", "thumb":"/project-images/20Kv13-sylvias-house/2014_20Kv13_THP0914.jpg", "location":"Perry County AL", "type":"Residential", "year":"2014", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v14-bobbys-house", "title":"20K v14 Bobby's House", "thumb":"/project-images/20Kv14-bobbys-house/2014_20Kv14_THP0205.jpg", "location":"Newbern AL", "type":"Residential", "year":"2014", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v15-idellas-house", "title":"20K v15 Idella's House", "thumb":"/project-images/20Kv15-idellas-house/2014_20Kv15_THP1005.jpg", "location":"Newbern AL", "type":"Residential", "year":"2014", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20k-v16-michelles-house", "title":"20K v16 Michele's House", "thumb":"/project-images/20Kv16-michelles-house/2014_20Kv16_THP1046.jpg", "location":"Newbern AL", "type":"Residential", "year":"2014", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/20kv17", "title":"20Kv17", "thumb":"/project-images/20Kv17/2015-20Kv17_interior-sketches-ww.jpg", "location":"Newbern AL", "type":"Residential", "year":"2015", "tag":"20K House"},
+{"url":"http://www.ruralstudio.org/projects/akron-boys-girls-club-1", "title":"Akron Boys & Girls Club 1", "thumb":"/project-images/akron-bgc-1/2001_Akron-Boys-and-Girls-Club-1_75081.jpg", "location":"Akron AL", "type":"Community", "year":"2001", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/akron-boys-girls-club", "title":"Akron Boys & Girls Club 2", "thumb":"/project-images/akron-bgc-2/2007_AkronBGC2_TH_96010M.jpg", "location":"Akron AL", "type":"Community", "year":"2007", "tag":"Lamella"},
+{"url":"http://www.ruralstudio.org/projects/akron-pavilion", "title":"Akron Pavilion", "thumb":"/project-images/akron-pavilion/1997_Akron-Pavilion_66026.jpg", "location":"Akron AL", "type":"Community", "year":"1997", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/akron-senior-center", "title":"Akron Senior Center", "thumb":"/project-images/akron-senior-center/2002_Akron-Senior-Center_2002_Akronseniorcenter_fd_hursley_-(5).jpg", "location":"Akron AL", "type":"Community", "year":"2002", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/antioch-baptist-church", "title":"Antioch Baptist Church", "thumb":"/project-images/antioch-baptist-church/2002_Antioch-Baptist-Church_AC1.jpg", "location":"Perry County AL", "type":"Community", "year":"2002", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/architecture-ambulance", "title":"Architecture Ambulance", "thumb":"/project-images/architecture ambulance/2002_Architecture-Ambulance_JNR4.jpg", "location":"Hale County AL", "type":"Residential", "year":"2002", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/bodark-amphitheater", "title":"Bodark Amphitheater", "thumb":"/project-images/bodark-amphitheater/2001_Bodark-Amphitheater_Events_PigRoast_2010.jpg", "location":"Newbern AL", "type":"Community", "year":"2001", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/bryant-haybale-house", "title":"Bryant Haybale House", "thumb":"/project-images/bryant-haybale-house/1995_Bryant-Haybale-House_59786p6.jpg", "location":"Masons Bend AL", "type":"Residential", "year":"1995", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/chantilly-house", "title":"Chantilly House", "thumb":"/project-images/chantilly-house/2001_Chantilly_TH_74849p.jpg", "location":"Newbern AL", "type":"Campus", "year":"2001", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/christine-papercrete-house", "title":"Christine Papercrete House", "thumb":"/project-images/christine-papercrete-house/2005_Christine-Papercrete-House_89068c.jpg", "location":"Masons Bend AL", "type":"Residential", "year":"2005", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/composting-privy-bathhouse", "title":"Composting Privy & Bathhouse", "thumb":"/page-images/x_UnderConstruction.jpg", "location":"Newbern AL", "type":"Campus", "year":"1998", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/corrugated-cardboard-pod", "title":"Corrugated Cardboard Pod", "thumb":"/project-images/corrugated-cardboard-pod/2001_Corrugated-Cardboard-Pod_74081.jpg", "location":"Newbern AL", "type":"Campus", "year":"2001", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/glass-chapel", "title":"Glass Chapel", "thumb":"/project-images/glass-chapel/2000_Glass-Chapel_72811p.jpg", "location":"Masons Bend AL", "type":"Community", "year":"2000", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/goat-house", "title":"Goat House", "thumb":"/project-images/goat-house/1997_Goat-House_71754p.jpg", "location":"Sawyerville AL", "type":"Residential", "year":"1997", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/great-hall", "title":"Great Hall", "thumb":"/project-images/great-hall/2003_Great-Hall_SUPER.jpg", "location":"Newbern AL", "type":"Campus", "year":"2003", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/greensboro-boys-and-girls-club", "title":"Greensboro Boys and Girls Club", "thumb":"/project-images/greensboro-boys-and-girls-club/2012_Greensboro-Boys-and-Girls-Club_bgc_Hursley01.jpg", "location":"Greensboro AL", "type":"Municipal", "year":"2012", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/hale-county-animal-shelter", "title":"Hale County Animal Shelter", "thumb":"/project-images/hale-county-animal-shelter/2006_Hale-County-Animal-Shelter_90253c.jpg", "location":"Greensboro AL", "type":"Municipal", "year":"2006", "tag":"Lamella"},
+{"url":"http://www.ruralstudio.org/projects/hale-county-hospital-courtyard", "title":"Hale County Hospital Courtyard", "thumb":"/project-images/hale-county-hospital-courtyard/2006_Hale-County-Hospital-Courtyard_90280c.jpg", "location":"Greensboro AL", "type":"Municipal", "year":"2006", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/harris-butterfly-house", "title":"Harris/Butterfly House", "thumb":"/project-images/harris-butterfly-house/1996_Harris-Butterfly-House_66018.jpg", "location":"Masons Bend AL", "type":"Residential", "year":"1996", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/hero-childrens-center", "title":"HERO Children's Center", "thumb":"/project-images/hero-childrens-center/1998_HERO-Children's-Center_71774p.jpg", "location":"Greensboro AL", "type":"Community", "year":"1998", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/hero-knowledge-cafe", "title":"HERO Knowledge Cafe", "thumb":"/project-images/hero-knowledge-cafe/2002_Hero-Knowledge-Center_HCG3.jpg", "location":"Greensboro AL", "type":"Community", "year":"2002", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/hero-playground", "title":"HERO Playground", "thumb":"/project-images/hero-playground/1997_HERO-Playground_66025p.jpg", "location":"Greensboro AL", "type":"Community", "year":"1997", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/lewis-house", "title":"Lewis House", "thumb":"/project-images/lewis-house/73874.jpg", "location":"Moundville AL", "type":"Residential", "year":"1998", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/lions-park-baseball-fields", "title":"Lions Park Baseball Fields", "thumb":"/project-images/lions-park-baseball-fields/2006_LP_Baseball-Fields_lp[andrew]7.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2006", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-concessions", "title":"Lions Park Concessions", "thumb":"/project-images/lions-park-concessions/2009_LP_Concessions_TH_MG_2203.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2009", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-fitness", "title":"Lions Park Fitness", "thumb":"/project-images/lions-park-fitness/2013_LPFitness_TH140425_RS_20anniv_0100.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2013", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-hub", "title":"Lions Park Hub", "thumb":"/project-images/lions-park-hub/2011_LPHub_Drawing_Perspective_edited.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2011", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-landscape", "title":"Lions Park Landscape", "thumb":"/project-images/lions-park-landscape/2012_Lions-Park-Park_7-A.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2012", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-playscape", "title":"Lions Park Playscape", "thumb":"/project-images/lions-park-PLAY/2010_LP_Play_TH_3171.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2010", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-restrooms", "title":"Lions Park Restrooms", "thumb":"/project-images/lions-park-restrooms/1007_LP_Restrooms_MG_2243.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2007", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-scouts", "title":"Lions Park Scout Hut", "thumb":"/project-images/lions-park-scouts/2012_LP_Scout_TH140425_RS_20anniv_0343.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2012", "tag":"Lions Park,Thinnings"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-shade", "title":"Lions Park Shade", "thumb":"/project-images/lions park shade/LP-Shade-drawings.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2015", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-skatepark", "title":"Lions Park Skatepark", "thumb":"/project-images/lions-park-skatepark/2009_LP_Skate_TH_MG_2035.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2009", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lions-park-surfaces", "title":"Lions Park Surfaces", "thumb":"/project-images/lions-park-surfaces/2007_LP_Surfaces_MG_2274.jpg", "location":"Greensboro AL", "type":"Parks", "year":"2007", "tag":"Lions Park"},
+{"url":"http://www.ruralstudio.org/projects/lucy-carpet-house", "title":"Lucy Carpet House", "thumb":"/project-images/lucy-carpet-house/2002_Lucy-Carpet-House_77280.jpg", "location":"Masons Bend AL", "type":"Residential", "year":"2002", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/masons-bend-basketball-court", "title":"Mason’s Bend Basketball Court", "thumb":"/project-images/masons-bend-basketball-court/2000_Mason's-Bend-Basketball-Court_73865.jpg", "location":"Masons Bend AL", "type":"Community", "year":"2000", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/michelles-house", "title":"Michelle's House", "thumb":"/project-images/michelle's-house/2006_Michelle's-House_88504.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2006", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/morrisette-house-kitchen", "title":"Morrisette House Kitchen", "thumb":"/project-images/morrisette-kitchen/2010_MorrisetteHouseKitchen_TH121019_RuralBook_5Do0349.jpg", "location":"Newbern AL", "type":"Campus", "year":"2010", "tag":"RS Farm"},
+{"url":"http://www.ruralstudio.org/projects/music-man-house", "title":"Music Man House", "thumb":"/project-images/music-man-house/2003_Music-Man-House_SCAN_5_1.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2003", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/newbern-baseball-club", "title":"Newbern Baseball Club", "thumb":"/project-images/newbern-baseball-club/2001_Newbern-Baseball-Club_75134p.jpg", "location":"Newbern AL", "type":"Community", "year":"2001", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/newbern-fire-station", "title":"Newbern Fire Station", "thumb":"/project-images/newbern-fire-station/2004_Newbern-Fire-Station_86134.jpg", "location":"Newbern AL", "type":"Municipal", "year":"2004", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/newbern-library", "title":"Newbern Library", "thumb":"/project-images/newbern-library/2013_NewbernLibrary_OriginalBuilding.jpg", "location":"Newbern AL", "type":"Community", "year":"2013", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/newbern-little-league", "title":"Newbern Little League", "thumb":"/project-images/newbern-little-league/2003_Newbern-Little-League_80537.jpg", "location":"Newbern AL", "type":"Parks", "year":"2003", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/newbern-playground", "title":"Newbern Playground", "thumb":"/project-images/newbern-playground/2001_Newbern-Playground_presentation.jpg", "location":"Newbern AL", "type":"Community", "year":"2001", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/newbern-town-hall", "title":"Newbern Town Hall", "thumb":"/project-images/newbern-town-hall/2011_NewbernTownHall_TH130427-RS-PROAST-P0295.jpg", "location":"Newbern AL", "type":"Municipal", "year":"2011", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/ole-mae-porch", "title":"Ole Mae Porch", "thumb":"/project-images/ole-mae-porch/2003_Ole-Mae-Porch_SCAN_12.jpg", "location":"Greensboro AL", "type":"Residential", "year":"2003", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/organic-vegetable-stand", "title":"Organic Vegetable Stand", "thumb":"/project-images/organic-farmers-stand/2003_VegetableStand_fd_photo_th_04.jpg", "location":"Perry County AL", "type":"Community", "year":"2003", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/outside-in", "title":"Outside In", "thumb":"/page-images/x_UnderConstruction.jpg", "location":"Greensboro AL", "type":"Community", "year":"2004", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/patrick-house", "title":"Patrick House", "thumb":"/project-images/patrick-house/2004_patrick_fd_hursley-(5).jpg", "location":"Newbern AL", "type":"Residential", "year":"2004", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/perry-county-learning-center", "title":"Perry County Learning Center", "thumb":"/project-images/perry-county-learning-center/2005_Perry-County-Learning-Center_89073.jpg", "location":"Marion AL", "type":"Municipal", "year":"2005", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/perry-lakes-park-birding-tower", "title":"Perry Lakes Park Birding Tower", "thumb":"/project-images/perry-lakes-park-birding-tower/2005_Perry-Lakes-Park_Birding-Tower_87464.jpg", "location":"Perry County AL", "type":"Parks", "year":"2005", "tag":"Perry Lakes Park"},
+{"url":"http://www.ruralstudio.org/projects/perry-lakes-park-covered-bridge", "title":"Perry Lakes Park Covered Bridge", "thumb":"/project-images/perry-lakes-park-covered-bridge/2004_Perry-Lakes-Park_Covered-Bridge_86184.jpg", "location":"Perry County AL", "type":"Parks", "year":"2004", "tag":"Perry Lakes Park"},
+{"url":"http://www.ruralstudio.org/projects/perry-lakes-park-pavilion", "title":"Perry Lakes Park Pavilion", "thumb":"/project-images/perry-lakes-park-pavilion/2002_Perry-Lakes-Park-Pavilion_78102p.jpg", "location":"Perry County AL", "type":"Parks", "year":"2002", "tag":"Perry Lakes Park"},
+{"url":"http://www.ruralstudio.org/projects/perry-lakes-park-restrooms", "title":"Perry Lakes Park Restrooms", "thumb":"/project-images/perry-lakes-park-restrooms/2003_Perry-Lakes-Park_Restrooms_mound.jpg", "location":"Perry County AL", "type":"Parks", "year":"2003", "tag":"Perry Lakes Park"},
+{"url":"http://www.ruralstudio.org/projects/pods", "title":"Pods", "thumb":"/project-images/pods/1999_Pods_71732.jpg", "location":"Newbern AL", "type":"Campus", "year":"1999", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/rose-lee-and-jasons-houses", "title":"Rose Lee and Jason's Houses", "thumb":"/project-images/rose lee and jason houses/2014_RoseLeeJason20Ks_THP0115.jpg", "location":"Footwash AL", "type":"Residential", "year":"2014", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/rose-lee-house", "title":"Rose Lee House", "thumb":"/project-images/rose-lee-house/2009_RoseLeeHouse_rose_lee_front_porch_seated.jpg", "location":"Footwash AL", "type":"Residential", "year":"2009", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/rural-heritage-center-gift-shop", "title":"Rural Heritage Center Gift Shop", "thumb":"/project-images/rural-heritage-center-gift-shop/2003_Rural-Heritage-Center_Gift-Shop_80671.jpg", "location":"Thomaston AL", "type":"Community", "year":"2003", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/rural-heritage-center-headquarters", "title":"Rural Heritage Center Headquarters", "thumb":"/project-images/rural-heritage-center-headquarters/2004_Rural-Heritage-Center-Headquarters_86339.jpg", "location":"Thomaston AL", "type":"Community", "year":"2004", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/rural-studio-woodshop", "title":"Rural Studio Fabrication Pavilion", "thumb":"/project-images/Rural Studio Woodshop/2015-Rural-Studio-Woodshop_Perspective.jpg", "location":"Newbern AL", "type":"Campus", "year":"2015", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/solar-greenhouse-phase-1", "title":"Rural Studio Farm", "thumb":"/project-images/2011 RSFarm/2011_RSFarm_THursley.jpg", "location":"Newbern AL", "type":"Campus", "year":"2011", "tag":"RS Farm"},
+{"url":"http://www.ruralstudio.org/projects/solar-greenhouse-phase-2", "title":"Rural Studio Farm", "thumb":"/project-images/solar-greenhouse-2/2012_SolarGreenhouse2_TH_MG_3860.jpg", "location":"Newbern AL", "type":"Campus", "year":"2012", "tag":"RS Farm"},
+{"url":"http://www.ruralstudio.org/projects/solar-greenhouse-phase-3", "title":"Rural Studio Farm", "thumb":"/project-images/solar-greenhouse-3/2013_SolarGreehouse3_Photo_front.jpg", "location":"Newbern AL", "type":"Campus", "year":"2013", "tag":"RS Farm"},
+{"url":"http://www.ruralstudio.org/projects/rural-studio-farm-food-storage", "title":"Rural Studio Farm Storehouse", "thumb":"/project-images/Rural Studio Farm Storehouse/Storehouse_Framing_3.jpg", "location":"Newbern AL", "type":"Campus", "year":"2015", "tag":"RS Farm"},
+{"url":"http://www.ruralstudio.org/projects/safe-house-museum", "title":"Safe House Museum", "thumb":"/project-images/safe-house-museum/2010_SafeHouse_TH_P1_0058.jpg", "location":"Greensboro AL", "type":"Community", "year":"2010", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/sanders-dudley-house-phase-1", "title":"Sanders Dudley House Phase 1", "thumb":"/project-images/sanders-dudley-house-1/2000_Sanders-Dudley-House_PG116.jpg", "location":"Sawyerville AL", "type":"Residential", "year":"2000", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/sanders-dudley-house-phase-2", "title":"Sanders Dudley House Phase 2", "thumb":"/project-images/sanders-dudley-house-1/2000_Sanders-Dudley-House_PG116.jpg", "location":"Sawyerville AL", "type":"Residential", "year":"2001", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/seed-house", "title":"Seed House", "thumb":"/page-images/x_UnderConstruction.jpg", "location":"Masons Bend AL", "type":"Residential", "year":"1999", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/shiles-house", "title":"Shiles House", "thumb":"/project-images/shiles-house/2002_Shiles-House_Schilles1.jpg", "location":"Hale County AL", "type":"Residential", "year":"2002", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/smoke-house", "title":"Smoke House", "thumb":"/project-images/smoke-house/1994_Smoke-House_59787p6.jpg", "location":"Masons Bend AL", "type":"Residential", "year":"1994", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/spencer-house", "title":"Spencer House", "thumb":"/page-images/x_UnderConstruction.jpg", "location":"Newbern AL", "type":"Campus", "year":"1998", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/spencer-house-kitchen", "title":"Spencer House Kitchen", "thumb":"/project-images/spencer-house-kitchen/2000_SpencerKitchen_TH_74100p.jpg", "location":"Newbern AL", "type":"Campus", "year":"2000", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/st-lukes-church", "title":"St. Luke's Church Phase 1", "thumb":"/project-images/st-lukes-church/2007_St.-Lukes-Church_DSCN3944.jpg", "location":"Old Cahawba AL", "type":"Community", "year":"2007", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/st-lukes-phase-2", "title":"St. Luke's Church Phase 2", "thumb":"/project-images/st-lukes-church-phase-2/2008_St-Lukes-Church_DSC01170.jpg", "location":"Old Cahawba AL", "type":"Community", "year":"2008", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/subrosa", "title":"Subrosa", "thumb":"/project-images/subrosa/2004_Subrosa_87397.jpg", "location":"Newbern AL", "type":"Community", "year":"2004", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/sunshine-school", "title":"Sunshine School", "thumb":"/project-images/sunshine-school/2004_Sunshine-School_4290464629_ba70c03a90_o.jpg", "location":"Newbern AL", "type":"Community", "year":"2004", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/supershed", "title":"Supershed", "thumb":"/project-images/supershed/1997_Supershed_71732.jpg", "location":"Newbern AL", "type":"Campus", "year":"1997", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/thinnings-bathhouse", "title":"Thinnings Bathhouse", "thumb":"/project-images/thinnings-bathhouse/2011_Thinnings-Bathhouse_TH120112RS_THN_P1_0014M.jpg", "location":"Payne Lake AL", "type":"Parks", "year":"2011", "tag":"Thinnings"},
+{"url":"http://www.ruralstudio.org/projects/thinnings-bridge", "title":"Thinnings Bridge", "thumb":"/page-images/people/alumni-2010/Alumni_2010_ThinningsBridge.JPG", "location":"Payne Lake AL", "type":"Parks", "year":"2010", "tag":"Thinnings"},
+{"url":"http://www.ruralstudio.org/projects/thinnings-teahouse", "title":"Thinnings Teahouse", "thumb":"/project-images/thinnings-teahouse/2009_ThinningsTeahouse_TeahouseFinished.jpg", "location":"Payne Lake AL", "type":"Community", "year":"2009", "tag":"Thinnings"},
+{"url":"http://www.ruralstudio.org/projects/thomaston-farmers-market", "title":"Thomaston Farmers Market", "thumb":"/page-images/x_UnderConstruction.jpg", "location":"Thomaston AL", "type":"Community", "year":"2000", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/utility-now", "title":"Utility NOW", "thumb":"/project-images/utility-now/2003_Utility-NOW_SCAN_13.jpg", "location":"York AL", "type":"Community", "year":"2003", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/willie-bell-house", "title":"Willie Bell House", "thumb":"/project-images/willie-bell-house/2005_Willie-Bell-House_86171.jpg", "location":"Masons Bend AL", "type":"Residential", "year":"2005", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/wilson-house", "title":"Wilson House", "thumb":"/page-images/x_UnderConstruction.jpg", "location":"Greensboro AL", "type":"Residential", "year":"1996", "tag":""},
+{"url":"http://www.ruralstudio.org/projects/yancey-tire-chapel", "title":"Yancy Tire Chapel", "thumb":"/project-images/yancey-tire-chapel/1995_Yancey-Tire-Chapel_62301p.jpg", "location":"Sawyerville AL", "type":"Community", "year":"1995", "tag":""},
+
+		]);
+
+		BCWebAppProject.allpageslist =
+[
+//home page
+"http://ruralstudio.businesscatalyst.com/",
+//about pages
+"http://www.ruralstudio.org/about/purpose-history",
+"http://www.ruralstudio.org/about/hale-county-alabama",
+"http://www.ruralstudio.org/about/faqs",
+"http://www.ruralstudio.org/about/events",
+"http://www.ruralstudio.org/about/awards",
+"http://www.ruralstudio.org/about/media-coverage",
+"http://www.ruralstudio.org/about/exhibits",
+"http://www.ruralstudio.org/about/books-film-websites",
+
+//people pages
+"http://www.ruralstudio.org/people/students",
+"http://www.ruralstudio.org/people/faculty",
+"http://www.ruralstudio.org/people/staff",
+"http://www.ruralstudio.org/people/consultants",
+"http://www.ruralstudio.org/people/2012",
+"http://www.ruralstudio.org/people/mockbee",
+"http://www.ruralstudio.org/people/d-k-ruth",
+"http://www.ruralstudio.org/people/alumni-2014",
+"http://www.ruralstudio.org/people/alumni-2013",
+"http://www.ruralstudio.org/people/alumni-2012",
+"http://www.ruralstudio.org/people/alumni-2011",
+"http://www.ruralstudio.org/people/alumni-2010",
+"http://www.ruralstudio.org/people/alumni-2009",
+"http://www.ruralstudio.org/people/alumni-2008",
+"http://www.ruralstudio.org/people/alumni-2007",
+"http://www.ruralstudio.org/people/alumni-2006",
+"http://www.ruralstudio.org/people/alumni-2005",
+"http://www.ruralstudio.org/people/alumni-2004",
+"http://www.ruralstudio.org/people/alumni-2003",
+"http://www.ruralstudio.org/people/alumni-2002",
+"http://www.ruralstudio.org/people/alumni-2001",
+"http://www.ruralstudio.org/people/alumni-2000",
+"http://www.ruralstudio.org/people/alumni-1999",
+"http://www.ruralstudio.org/people/alumni-1998",
+"http://www.ruralstudio.org/people/alumni-1997",
+
+//process pages
+"http://www.ruralstudio.org/process/test-page",
+
+//program pages
+"http://www.ruralstudio.org/programs/third-year",
+"http://www.ruralstudio.org/programs/thesis",
+"http://www.ruralstudio.org/programs/outreach",
+"http://www.ruralstudio.org/programs/woodshop",
+"http://www.ruralstudio.org/programs/watercolor",
+"http://www.ruralstudio.org/programs/hand-drawing",
+"http://www.ruralstudio.org/programs/20k-house-product-line",
+"http://www.ruralstudio.org/programs/rs20-20th-anniversary",
+
+//project pages
+"http://www.ruralstudio.org/projects/20kv1-elizabeths-house",
+"http://www.ruralstudio.org/projects/20k-v2-franks-house",
+"http://www.ruralstudio.org/projects/20k-v3-32k-house",
+"http://www.ruralstudio.org/projects/20kv4-pattern-book-house",
+"http://www.ruralstudio.org/projects/20kv5-loft-house",
+"http://www.ruralstudio.org/projects/20kv6-roundwood-house",
+"http://www.ruralstudio.org/projects/20kv7-bridge-house",
+"http://www.ruralstudio.org/projects/20k-v8-daves-house",
+"http://www.ruralstudio.org/projects/20k-v9-macs-house",
+"http://www.ruralstudio.org/projects/20k-v10-joannes-house",
+"http://www.ruralstudio.org/projects/20k-v11-turners-house",
+"http://www.ruralstudio.org/projects/20k-v12-eddies-house",
+"http://www.ruralstudio.org/projects/20kv13-sylvias-house",
+"http://www.ruralstudio.org/projects/20k-v14-bobbys-house",
+"http://www.ruralstudio.org/projects/20k-v15-idellas-house",
+"http://www.ruralstudio.org/projects/20k-v16-michelles-house",
+"http://www.ruralstudio.org/projects/20kv17",
+"http://www.ruralstudio.org/projects/akron-boys-girls-club-1",
+"http://www.ruralstudio.org/projects/akron-boys-girls-club",
+"http://www.ruralstudio.org/projects/akron-pavilion",
+"http://www.ruralstudio.org/projects/akron-senior-center",
+"http://www.ruralstudio.org/projects/antioch-baptist-church",
+"http://www.ruralstudio.org/projects/architecture-ambulance",
+"http://www.ruralstudio.org/projects/bodark-amphitheater",
+"http://www.ruralstudio.org/projects/bryant-haybale-house",
+"http://www.ruralstudio.org/projects/chantilly-house",
+"http://www.ruralstudio.org/projects/christine-papercrete-house",
+"http://www.ruralstudio.org/projects/composting-privy-bathhouse",
+"http://www.ruralstudio.org/projects/corrugated-cardboard-pod",
+"http://www.ruralstudio.org/projects/glass-chapel",
+"http://www.ruralstudio.org/projects/goat-house",
+"http://www.ruralstudio.org/projects/great-hall",
+"http://www.ruralstudio.org/projects/greensboro-boys-and-girls-club",
+"http://www.ruralstudio.org/projects/hale-county-animal-shelter",
+"http://www.ruralstudio.org/projects/hale-county-hospital-courtyard",
+"http://www.ruralstudio.org/projects/harris-butterfly-house",
+"http://www.ruralstudio.org/projects/hero-childrens-center",
+"http://www.ruralstudio.org/projects/hero-knowledge-cafe",
+"http://www.ruralstudio.org/projects/hero-playground",
+"http://www.ruralstudio.org/projects/lewis-house",
+"http://www.ruralstudio.org/projects/lions-park-baseball-fields",
+"http://www.ruralstudio.org/projects/lions-park-concessions",
+"http://www.ruralstudio.org/projects/lions-park-fitness",
+"http://www.ruralstudio.org/projects/lions-park-hub",
+"http://www.ruralstudio.org/projects/lions-park-landscape",
+"http://www.ruralstudio.org/projects/lions-park-playscape",
+"http://www.ruralstudio.org/projects/lions-park-restrooms",
+"http://www.ruralstudio.org/projects/lions-park-scouts",
+"http://www.ruralstudio.org/projects/lions-park-shade",
+"http://www.ruralstudio.org/projects/lions-park-skatepark",
+"http://www.ruralstudio.org/projects/lions-park-surfaces",
+"http://www.ruralstudio.org/projects/lucy-carpet-house",
+"http://www.ruralstudio.org/projects/masons-bend-basketball-court",
+"http://www.ruralstudio.org/projects/michelles-house",
+"http://www.ruralstudio.org/projects/morrisette-house-kitchen",
+"http://www.ruralstudio.org/projects/music-man-house",
+"http://www.ruralstudio.org/projects/newbern-baseball-club",
+"http://www.ruralstudio.org/projects/newbern-fire-station",
+"http://www.ruralstudio.org/projects/newbern-library",
+"http://www.ruralstudio.org/projects/newbern-little-league",
+"http://www.ruralstudio.org/projects/newbern-playground",
+"http://www.ruralstudio.org/projects/newbern-town-hall",
+"http://www.ruralstudio.org/projects/ole-mae-porch",
+"http://www.ruralstudio.org/projects/organic-vegetable-stand",
+"http://www.ruralstudio.org/projects/outside-in",
+"http://www.ruralstudio.org/projects/patrick-house",
+"http://www.ruralstudio.org/projects/perry-county-learning-center",
+"http://www.ruralstudio.org/projects/perry-lakes-park-birding-tower",
+"http://www.ruralstudio.org/projects/perry-lakes-park-covered-bridge",
+"http://www.ruralstudio.org/projects/perry-lakes-park-pavilion",
+"http://www.ruralstudio.org/projects/perry-lakes-park-restrooms",
+"http://www.ruralstudio.org/projects/pods",
+"http://www.ruralstudio.org/projects/rose-lee-and-jasons-houses",
+"http://www.ruralstudio.org/projects/rose-lee-house",
+"http://www.ruralstudio.org/projects/rural-heritage-center-gift-shop",
+"http://www.ruralstudio.org/projects/rural-heritage-center-headquarters",
+"http://www.ruralstudio.org/projects/rural-studio-woodshop",
+"http://www.ruralstudio.org/projects/solar-greenhouse-phase-1",
+"http://www.ruralstudio.org/projects/solar-greenhouse-phase-2",
+"http://www.ruralstudio.org/projects/solar-greenhouse-phase-3",
+"http://www.ruralstudio.org/projects/rural-studio-farm-food-storage",
+"http://www.ruralstudio.org/projects/safe-house-museum",
+"http://www.ruralstudio.org/projects/sanders-dudley-house-phase-1",
+"http://www.ruralstudio.org/projects/sanders-dudley-house-phase-2",
+"http://www.ruralstudio.org/projects/seed-house",
+"http://www.ruralstudio.org/projects/shiles-house",
+"http://www.ruralstudio.org/projects/smoke-house",
+"http://www.ruralstudio.org/projects/spencer-house",
+"http://www.ruralstudio.org/projects/spencer-house-kitchen",
+"http://www.ruralstudio.org/projects/st-lukes-church",
+"http://www.ruralstudio.org/projects/st-lukes-phase-2",
+"http://www.ruralstudio.org/projects/subrosa",
+"http://www.ruralstudio.org/projects/sunshine-school",
+"http://www.ruralstudio.org/projects/supershed",
+"http://www.ruralstudio.org/projects/thinnings-bathhouse",
+"http://www.ruralstudio.org/projects/thinnings-bridge",
+"http://www.ruralstudio.org/projects/thinnings-teahouse",
+"http://www.ruralstudio.org/projects/thomaston-farmers-market",
+"http://www.ruralstudio.org/projects/utility-now",
+"http://www.ruralstudio.org/projects/willie-bell-house",
+"http://www.ruralstudio.org/projects/wilson-house",
+"http://www.ruralstudio.org/projects/yancey-tire-chapel",
+
+//initiatives pages
+"http://www.ruralstudio.org/initiatives/20k-house",
+
+//hand craft pages
+"http://www.ruralstudio.org/handcraft/hand-drawing",
+"http://www.ruralstudio.org/handcraft/water-color",
+"http://www.ruralstudio.org/handcraft/wood-working",
+
+//connect page
+"http://ruralstudio.businesscatalyst.com/connect.html",
+//get involved pages
+"http://www.ruralstudio.org/get-involved/apply-for-outreach",
+"http://www.ruralstudio.org/get-involved/contribute",
+"http://www.ruralstudio.org/get-involved/tour",
+"http://www.ruralstudio.org/get-involved/volunteer",
+"http://www.ruralstudio.org/get-involved/work-for-us",
+
+]
+        </script>
+        <script>
+        
+
+		
+		$(function(){        			
+		
+		$('#navProjects a').addClass('current-pg');
+		
+		function getUrlVar(key){
+			var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search); 
+			return result && unescape(result[1]) || ""; 
+		}
+		
+		Array.prototype.unique =
+		  function() {
+			var a = [];
+			var l = this.length;
+			for(var i=0; i<l; i++) {
+			  for(var j=i+1; j<l; j++) {
+				// If this[i] is found later in the array
+				if (this[i] === this[j])
+				  j = ++i;
+			  }
+			  a.push(this[i]);
+			}
+			return a;
+		  };
+
+		function arrayToArray(arr) {		
+			var result = [];
+			for (var i = 0; i < arr.length; i++) {
+				//console.log(arr);
+				var splitup = arr[i].split(",");
+				for (var j = 0; j < splitup.length; j++) {
+					if (splitup[j] == "") { //nothing
+					} else {
+					result.push(splitup[j]);
+					}
+				}
+				//console.log(splitup);
+			}
+			result = result.unique();
+			return result;
+		}
+
+		var sortingVar = getUrlVar("sort");
+		if (!sortingVar) {sortingVar = 'year';};
+
+
+		
+		if(sortingVar == "tag") {
+			console.log("sorting by tag, so do something special here");
+			BCWebAppProject.projlistfortags = BCWebAppProject.allprojects().distinct('tag');
+			BCWebAppProject.projlistfortags.sort();
+			var taglist = BCWebAppProject.projlistfortags;
+			var newlist = arrayToArray(taglist);
+			console.log(newlist);
+			// get list of tags
+			// search value of tag for each tag
+			// 
+			
+			
+			BCWebAppProject.projlist = newlist;		
+		} else {
+			console.log("sorting by something else");
+			BCWebAppProject.projlist = BCWebAppProject.allprojects().distinct(sortingVar);
+	
+			BCWebAppProject.projlist.sort();
+			
+			if(sortingVar == "year"){
+			BCWebAppProject.projlist.reverse();	
+			}
+			
+			var otherlist = BCWebAppProject.projlist;
+			var newotherlist = arrayToArray(otherlist);
+			console.log(newotherlist);
+		
+		
+		}
+		
+		$.each(BCWebAppProject.projlist, function(index,value){
+			maketitle(value);
+			findproj(value);
+		});
+
+		var gridclass = 'grid_1';
+		
+        function findproj(title){
+        //console.log('sorting by: '+sortingVar+' and title of: '+title);
+        	switch(sortingVar){
+				case ('type'): BCWebAppProject.projectssorted = BCWebAppProject.allprojects({type:title}).get();
+				$('#sortbreadcrumb').html('PROJECTS / BY TYPE');
+				break;
+				case ('location'): BCWebAppProject.projectssorted = BCWebAppProject.allprojects({location:title}).get();
+				$('#sortbreadcrumb').html('PROJECTS / BY LOCATION');
+				break;
+				case ('tag'): BCWebAppProject.projectssorted = BCWebAppProject.allprojects({tag:{like:title}}).get();
+				$('#sortbreadcrumb').html('PROJECTS / BY TAG');
+				break;				
+				default: BCWebAppProject.projectssorted = BCWebAppProject.allprojects({year:title}).get();
+				$('#sortbreadcrumb').html('PROJECTS / BY YEAR');
+	        }
+	        
+	        var locid = title.replace(/ /g,"_")+'wrap';
+			//var newrow = $('<div/>',{id:locid,class:'container_5 clearfix'});
+			var newrow = $('<div id="' + locid + '" class="container_5 clearfix" />');
+
+			$('#gallerylist').append(newrow);
+
+			var i = 1;
+				$.each(BCWebAppProject.projectssorted, function(){
+					switch(i){
+					/* perhaps there is better math for thi*/
+						case (1):
+            case (6):
+            case (11):
+            case (16):
+            case (21): gridclass = 'grid_1 alpha';
+						break;
+						case (5):
+            case (10):
+            case (15):
+            case (20):
+            case (25): gridclass = 'grid_1 omega'; 
+						break;
+						default: gridclass = 'grid_1';
+					}
+					makethumb(this.url, this.title, this.thumb, locid, i);
+					i++;
+				});
+		}
+		
+		function maketitle(title) {
+			var titleid = title.replace(/ /g,'-');
+			$('#gallerylist').append('<h1 id="'+titleid+'" style="padding-top:65px;">'+title+'</h1>');
+		}
+
+		function makethumb(BCWurl, BCWtitle, BCWthumb, wrapid, i){
+		var gtitle = '<br>'+BCWtitle;
+
+					
+		//var gimg = $('<img/>',{src:BCWthumb+'?action=thumbnail&width=345&height=230&Algorithm=fill_proportional',alt:BCWtitle});
+		var gimg = $('<img src="' + BCWthumb + '?action=thumbnail&width=345&height=230&Algorithm=fill_proportional" alt="'+BCWtitle+'"/>');
+
+		var ga = $('<a/>', {
+					href:BCWurl,
+					title:BCWtitle
+				}).append(gimg, gtitle);
+				
+		//var gitem = $('<div/>',{class: gridclass}).append(ga);
+		var gitem = $('<div class="' + gridclass + '" />').append(ga);
+		
+		$('#'+wrapid).append(gitem);
+		}
+		
+		
+		});
+        </script>
+        <div id="title" class="clearfix">
+        <div class="pgTitle">
+        <p id="sortbreadcrumb">PROJECTS / BY YEAR</p>
+        </div>
+        <div class="pgFilter">
+        <p>SORT PROJECTS BY: <a href="projects-sort=year.html">YEAR</a><a href="projects-sort=location.html">LOCATION</a><a href="projects-sort=tag.html">TAG</a><a href="projects-sort=type.html" class="last-link">TYPE</a></p>
+        </div>
+        </div>
+        <div class="gallery-wrap clearfix" id="gallerywrap">
+        <div id="gallerylist" style="padding-bottom: 800px;">
+        </div>
+        <!--gallerylist-->
+        </div>
+        <!--gallerywrap-->
+        <p><br />
+</p>
+
+        <div style="display: none;">
+        "http://www.ruralstudio.org/projects/20kv1-elizabeths-house",
+"http://www.ruralstudio.org/projects/20k-v2-franks-house",
+"http://www.ruralstudio.org/projects/20k-v3-32k-house",
+"http://www.ruralstudio.org/projects/20kv4-pattern-book-house",
+"http://www.ruralstudio.org/projects/20kv5-loft-house",
+"http://www.ruralstudio.org/projects/20kv6-roundwood-house",
+"http://www.ruralstudio.org/projects/20kv7-bridge-house",
+"http://www.ruralstudio.org/projects/20k-v8-daves-house",
+"http://www.ruralstudio.org/projects/20k-v9-macs-house",
+"http://www.ruralstudio.org/projects/20k-v10-joannes-house",
+"http://www.ruralstudio.org/projects/20k-v11-turners-house",
+"http://www.ruralstudio.org/projects/20k-v12-eddies-house",
+"http://www.ruralstudio.org/projects/20kv13-sylvias-house",
+"http://www.ruralstudio.org/projects/20k-v14-bobbys-house",
+"http://www.ruralstudio.org/projects/20k-v15-idellas-house",
+"http://www.ruralstudio.org/projects/20k-v16-michelles-house",
+"http://www.ruralstudio.org/projects/20kv17",
+"http://www.ruralstudio.org/projects/akron-boys-girls-club-1",
+"http://www.ruralstudio.org/projects/akron-boys-girls-club",
+"http://www.ruralstudio.org/projects/akron-pavilion",
+"http://www.ruralstudio.org/projects/akron-senior-center",
+"http://www.ruralstudio.org/projects/antioch-baptist-church",
+"http://www.ruralstudio.org/projects/architecture-ambulance",
+"http://www.ruralstudio.org/projects/bodark-amphitheater",
+"http://www.ruralstudio.org/projects/bryant-haybale-house",
+"http://www.ruralstudio.org/projects/chantilly-house",
+"http://www.ruralstudio.org/projects/christine-papercrete-house",
+"http://www.ruralstudio.org/projects/composting-privy-bathhouse",
+"http://www.ruralstudio.org/projects/corrugated-cardboard-pod",
+"http://www.ruralstudio.org/projects/glass-chapel",
+"http://www.ruralstudio.org/projects/goat-house",
+"http://www.ruralstudio.org/projects/great-hall",
+"http://www.ruralstudio.org/projects/greensboro-boys-and-girls-club",
+"http://www.ruralstudio.org/projects/hale-county-animal-shelter",
+"http://www.ruralstudio.org/projects/hale-county-hospital-courtyard",
+"http://www.ruralstudio.org/projects/harris-butterfly-house",
+"http://www.ruralstudio.org/projects/hero-childrens-center",
+"http://www.ruralstudio.org/projects/hero-knowledge-cafe",
+"http://www.ruralstudio.org/projects/hero-playground",
+"http://www.ruralstudio.org/projects/lewis-house",
+"http://www.ruralstudio.org/projects/lions-park-baseball-fields",
+"http://www.ruralstudio.org/projects/lions-park-concessions",
+"http://www.ruralstudio.org/projects/lions-park-fitness",
+"http://www.ruralstudio.org/projects/lions-park-hub",
+"http://www.ruralstudio.org/projects/lions-park-landscape",
+"http://www.ruralstudio.org/projects/lions-park-playscape",
+"http://www.ruralstudio.org/projects/lions-park-restrooms",
+"http://www.ruralstudio.org/projects/lions-park-scouts",
+"http://www.ruralstudio.org/projects/lions-park-shade",
+"http://www.ruralstudio.org/projects/lions-park-skatepark",
+"http://www.ruralstudio.org/projects/lions-park-surfaces",
+"http://www.ruralstudio.org/projects/lucy-carpet-house",
+"http://www.ruralstudio.org/projects/masons-bend-basketball-court",
+"http://www.ruralstudio.org/projects/michelles-house",
+"http://www.ruralstudio.org/projects/morrisette-house-kitchen",
+"http://www.ruralstudio.org/projects/music-man-house",
+"http://www.ruralstudio.org/projects/newbern-baseball-club",
+"http://www.ruralstudio.org/projects/newbern-fire-station",
+"http://www.ruralstudio.org/projects/newbern-library",
+"http://www.ruralstudio.org/projects/newbern-little-league",
+"http://www.ruralstudio.org/projects/newbern-playground",
+"http://www.ruralstudio.org/projects/newbern-town-hall",
+"http://www.ruralstudio.org/projects/ole-mae-porch",
+"http://www.ruralstudio.org/projects/organic-vegetable-stand",
+"http://www.ruralstudio.org/projects/outside-in",
+"http://www.ruralstudio.org/projects/patrick-house",
+"http://www.ruralstudio.org/projects/perry-county-learning-center",
+"http://www.ruralstudio.org/projects/perry-lakes-park-birding-tower",
+"http://www.ruralstudio.org/projects/perry-lakes-park-covered-bridge",
+"http://www.ruralstudio.org/projects/perry-lakes-park-pavilion",
+"http://www.ruralstudio.org/projects/perry-lakes-park-restrooms",
+"http://www.ruralstudio.org/projects/pods",
+"http://www.ruralstudio.org/projects/rose-lee-and-jasons-houses",
+"http://www.ruralstudio.org/projects/rose-lee-house",
+"http://www.ruralstudio.org/projects/rural-heritage-center-gift-shop",
+"http://www.ruralstudio.org/projects/rural-heritage-center-headquarters",
+"http://www.ruralstudio.org/projects/rural-studio-woodshop",
+"http://www.ruralstudio.org/projects/solar-greenhouse-phase-1",
+"http://www.ruralstudio.org/projects/solar-greenhouse-phase-2",
+"http://www.ruralstudio.org/projects/solar-greenhouse-phase-3",
+"http://www.ruralstudio.org/projects/rural-studio-farm-food-storage",
+"http://www.ruralstudio.org/projects/safe-house-museum",
+"http://www.ruralstudio.org/projects/sanders-dudley-house-phase-1",
+"http://www.ruralstudio.org/projects/sanders-dudley-house-phase-2",
+"http://www.ruralstudio.org/projects/seed-house",
+"http://www.ruralstudio.org/projects/shiles-house",
+"http://www.ruralstudio.org/projects/smoke-house",
+"http://www.ruralstudio.org/projects/spencer-house",
+"http://www.ruralstudio.org/projects/spencer-house-kitchen",
+"http://www.ruralstudio.org/projects/st-lukes-church",
+"http://www.ruralstudio.org/projects/st-lukes-phase-2",
+"http://www.ruralstudio.org/projects/subrosa",
+"http://www.ruralstudio.org/projects/sunshine-school",
+"http://www.ruralstudio.org/projects/supershed",
+"http://www.ruralstudio.org/projects/thinnings-bathhouse",
+"http://www.ruralstudio.org/projects/thinnings-bridge",
+"http://www.ruralstudio.org/projects/thinnings-teahouse",
+"http://www.ruralstudio.org/projects/thomaston-farmers-market",
+"http://www.ruralstudio.org/projects/utility-now",
+"http://www.ruralstudio.org/projects/willie-bell-house",
+"http://www.ruralstudio.org/projects/wilson-house",
+"http://www.ruralstudio.org/projects/yancey-tire-chapel",
+
+        </div>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41807731-1', 'ruralstudio.org');
+  ga('send', 'pageview');
+
+</script>
+    
+</body>
+</html>

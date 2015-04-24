@@ -1,0 +1,17 @@
+/* javascript related styles */
+
+.is-message,
+.is-arrow {
+	display:none;
+}
+
+.is-intro-piece {
+	opacity:0;
+	transition:opacity .25s ease-out;
+}
+
+.loaded .is-intro-piece {
+	opacity:1;
+}
+
+.is-loader {display:none;}

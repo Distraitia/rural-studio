@@ -1,0 +1,54 @@
+.index-container {
+	font-size: 16px;
+	padding: 20px;
+
+	h1 { font-size: 2em; }
+	h2 { font-size: 1.5em; }
+	h3 { font-size: 1.17em; }
+	h4 { font-size: 1em; }
+	h5 { font-size: .83em; }
+	h6 { font-size: .67em; }
+
+	h1 { font-size: 32px; }
+	h2 { font-size: 24px; }
+	h3 { font-size: 18.72px; }
+	h4 { font-size: 16px; }
+	h5 { font-size: 13.28px; }
+	h6 { font-size: 10.72px; }
+	p {
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+	ul {
+		margin-top: 5px;
+	}
+
+	ul > li {
+		margin: 0 0 6px;
+	}
+
+	ul li a {
+		color: $red;
+
+		&:hover {
+			color: $blk;
+		}
+	}
+	ul > li a {
+		text-decoration: underline;
+	}
+	ol li a {
+		color: $red;
+		text-decoration: none;
+	}
+
+	li {
+		font-family: $font-reg;
+		font-size: 18px;
+
+		strong {
+			font-family: $font-bold;
+			font-weight: normal;
+		}
+	}
+}

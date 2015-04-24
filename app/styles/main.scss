@@ -1,13 +1,3 @@
-$icon-font-path: '../fonts/';
-
-/* libs */
-/*@import "normalize.scss";*/
-/*@import "wtf-forms";*/
-
 /* src */
-@import "fonts";
 @import "mixins";
-@import "global";
-@import "layouts";
-@import "index";
-@import "javascript";
+@import "mobile";

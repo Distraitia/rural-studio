@@ -1,0 +1,9 @@
+Sitemap: http://ruralstudioblogs.org/sitemap-pages.xml
+Sitemap: http://ruralstudioblogs.org/sitemap1.xml
+
+User-agent: *
+Disallow: /private
+Disallow: /random
+Disallow: /day
+Crawl-delay: 1
+

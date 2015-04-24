@@ -1,0 +1,17 @@
+User-agent: *
+
+Disallow: /UCMP/weblayout/groups/aia_members_only/documents/
+
+Disallow: /UCMP/weblayout/groups/aia/documents/pdf/aiab089195.pdf
+Disallow: /UCMP/weblayout/groups/aia/documents/pdf/aiab089070.pdf
+Disallow: /UCMP/weblayout/groups/aia/documents/pdf/aiab089071.pdf
+Disallow: /UCMP/weblayout/groups/aia/documents/pdf/aiab089072.pdf
+Disallow: /UCMP/weblayout/groups/aia/documents/pdf/aiab089067.pdf
+Disallow: /UCMP/weblayout/groups/aia/documents/pdf/aiab089068.pdf
+Disallow: /UCMP/weblayout/groups/aia/documents/pdf/aiab089069.pdf
+
+Disallow: /UCMP/weblayout/groups/aia/documents/video
+Disallow: /UCMP/weblayout/groups/aia/documents/zip
+Disallow: /UCMP/weblayout/groups/aia/documents/audio
+Disallow: /UCMP/weblayout/groups/ek_public/documents/
+Disallow: /UCMP/weblayout/groups/ek_members/documents/

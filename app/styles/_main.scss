@@ -9,6 +9,13 @@
 #contentbox {
 	padding: 170px 0 0;
 }
+.omega + .grid_1 {
+	margin-left: 0;
+}
+#thumbrow16 .grid_1:last-child {
+	margin-left: 0;
+	clear: left;
+}
 /* End of Compensatory Styles */
 
 /* Mobile */

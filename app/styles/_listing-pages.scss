@@ -1,0 +1,87 @@
+/* Mobile Stylesheet */
+
+/* Compensatory Styles */
+
+/* End of Compensatory Styles */
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	
+}
+@media screen and (max-width: 767px) {
+	
+}
+@media screen and (max-width: 480px) {
+	
+}
+.mobile {
+	#title {
+		display: none;
+	}
+	#gallerylist {
+		box-sizing: border-box;
+
+		* { box-sizing: border-box; }
+
+		.grid_1 {
+			/*flo*/
+			margin: 0;
+		}
+		.container_5 {
+			min-width: 0;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		#gallerylist .grid_1 {
+			width: 20%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		#gallerylist .container_5 {
+			margin-bottom: 20px;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		#gallerywrap {
+			padding: 25px 30px;
+		}
+		#gallerylist .grid_1 {
+			width: calc(100% / 3);
+			padding: 0 10px 15px;
+
+			img {
+				margin-bottom: 5px;
+			}
+		}
+		#gallerylist .container_5 {
+			margin-bottom: 30px;
+		}
+	}
+	@media screen and (max-width: 540px) {
+		#gallerywrap {
+			padding: 25px 30px;
+		}
+		#gallerylist .grid_1 {
+			width: 50%;
+			padding: 0 10px 15px;
+
+			img {
+				margin-bottom: 5px;
+			}
+		}
+	}
+	@media screen and (max-width: 480px) {
+		#gallerywrap {
+			padding: 25px 30px;
+		}
+		#gallerylist .grid_1 {
+			width: 100%;
+			padding: 0 0 10px;
+			text-align: center;
+
+			img {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

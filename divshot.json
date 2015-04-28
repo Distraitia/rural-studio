@@ -1,7 +1,6 @@
 {
-  "name": "gp-fireguard-consumer",
-  "root": "./dist/",
+  "name": "rural-studio",
+  "root": "./",
   "clean_urls": true,
-  "error_page": "error.html",
-  "exclude":["node_modules",".tmp"]
+  "error_page": "y"
 }

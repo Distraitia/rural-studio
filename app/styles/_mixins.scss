@@ -10,6 +10,10 @@ $google-red: #dd4b39;
 @mixin border-box() {
 	box-sizing: border-box;
 }
+@mixin margin-auto() {
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* vw Conversion Functions */
 @mixin vwFont($f-size) {

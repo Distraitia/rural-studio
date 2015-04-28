@@ -1,7 +1,15 @@
 /* Mobile Stylesheet */
 
 /* Compensatory Styles */
+#gallerywrap {
+	@include border-box;
 
+	* { @include border-box; }
+
+	.grid_1 a {
+		transition: all .2s ease-out;
+	}
+}
 /* End of Compensatory Styles */
 
 /* Mobile */
@@ -14,56 +22,81 @@
 @media screen and (max-width: 480px) {
 	
 }
-.mobile {
+body.gallerypagewrap.mobile {
+	background: #a39d98 url("../images/rural-texture.jpg");
+}
+.tablet-B {
 	#title {
 		display: none;
 	}
-	#gallerylist {
-		box-sizing: border-box;
+	#gallerywrap {
+		padding: 36px;
+	}
+	.container_5 {
+		min-width: 0px;
+	}
+	&:not(.mobile) {
+		#gallerywrap {
+			padding: 36px 16px;
+		}
+		.container_5 {
+			/*margin-bottom: 20px;*/
 
-		* { box-sizing: border-box; }
-
+			a {
+				height: 52px;
+			}
+		}
+		.grid_1 img {
+			margin-bottom: 5px;
+		}
+	}
+}
+.mobile {
+	#gallerywrap {
 		.grid_1 {
-			/*flo*/
 			margin: 0;
 		}
 		.container_5 {
 			min-width: 0;
 		}
 	}
-	@media screen and (min-width: 768px) {
-		#gallerylist .grid_1 {
-			width: 20%;
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-		#gallerylist .container_5 {
-			margin-bottom: 20px;
-		}
+	#thumbrow16 {
+		margin-bottom: 0;
 	}
-	@media screen and (max-width: 767px) {
-		#gallerywrap {
-			padding: 25px 30px;
-		}
-		#gallerylist .grid_1 {
-			width: calc(100% / 3);
-			padding: 0 10px 15px;
+	.grid_1:last-child {
+		padding-bottom: 0;
+	}
+	#gallerywrap {
+		max-width: 480px;
+		margin: 36px auto;
+		background: $wt;
 
+		.container_5 {
 			img {
 				margin-bottom: 5px;
 			}
 		}
-		#gallerylist .container_5 {
-			margin-bottom: 30px;
+		.grid_1 {
+			width: 100%;
+			padding-bottom: 24px;
+
+			img {
+				width: 100%;
+			}
+		}
+		.grid_1:last-child {
+			padding-bottom: 0;
+		}
+	}
+	.container_5 {
+		a {
+			font-size: 16px;
+			height: 54px;
 		}
 	}
 	@media screen and (max-width: 540px) {
-		#gallerywrap {
-			padding: 25px 30px;
-		}
-		#gallerylist .grid_1 {
-			width: 50%;
-			padding: 0 10px 15px;
+		#gallerywrap .grid_1 {
+			/*padding: 0 10px 15px;*/
 
 			img {
 				margin-bottom: 5px;
@@ -72,16 +105,38 @@
 	}
 	@media screen and (max-width: 480px) {
 		#gallerywrap {
-			padding: 25px 30px;
+			margin: 0 auto;
+			padding: 24px;
 		}
-		#gallerylist .grid_1 {
-			width: 100%;
-			padding: 0 0 10px;
-			text-align: center;
+	}
+}
+body:not(.mobile) {
+	.container_5 {
+		margin-bottom: 20px;
+		margin: 0;
+		margin-bottom: 0;
 
-			img {
-				margin-bottom: 0;
+		& + .container_5 {
+			margin-top: 20px;
+		}
+
+		.grid_1 {
+			width: 20%;
+			margin: 0;
+			padding: 0 10px 20px;
+
+			&:nth-child(5n + 1) {
+				clear: left;
+			}
+			&:nth-child(5n) {
+				clear: right;
 			}
 		}
+		a {
+			height: 52px;
+		}
+	}
+	#thumbrow16 .grid_1 {
+		padding-bottom: 40px;
 	}
 }

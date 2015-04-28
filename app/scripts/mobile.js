@@ -41,18 +41,24 @@ var logColor = '#eeeeff',
 	logPadding = '10px',
 	logFontSize = '22px';
 
-/* script to add a mobile class if the window is under 1025px wide */
-var mobileState = true;
-var windowWidth = $(window).width();
-
-var imgHeight = $('.ps-carousel img').height(),
-		gallery = $('#PhotoSwipeTarget');
+/* script to add a mobile class if the window is under 768px wide */
+var mobileState = true,
+	taletState = true,
+	windowWidth = $(window).width(),
+	body = $('body');
 
 var checkWin = function(){
-	if($(this).width() != windowWidth){
+	if ($(this).width() != windowWidth) {
 		windowWidth = $(this).width();       
 	}
-	if(windowWidth < 1025){
+	if (windowWidth < 1025) {
+		$('body').addClass('tablet-B');   
+		tabletState = true;
+	} else {
+		$('body').removeClass('tablet-B');   
+		tabletState = false;
+	}
+	if (windowWidth < 768) {
 		$('body').addClass('mobile');   
 		mobileState = true;
 	} else {
@@ -71,29 +77,33 @@ function shortenGallery() {
 
 function photoCred() {
 	var credClone = $('#photo-credit').clone().attr('id','photo-credit-mobile');
-	setTimeout(function() { console.clear(); }, 900);
+	setTimeout(function() { console.clear(); }, 1050);
 	
 	// creates photo credit clone if it doesn't exist
 	if ($('#photo-credit-mobile').length < 1)
 		credClone.appendTo($('#PhotoSwipeTarget'));
+}
 
-	if ($('body').hasClass('mobile')) {
-		// console.log
-	}
+function testLabels() {
+	var galleryWrap = $('.gallerypagewrap'),
+		labels = $('.container_5:not(#thumbrow1) .grid_1 a');
+
+	labels.each(function() {
+		$(this).append("<br>hubba hullaballoo");
+	});
 }
 
 $(document).ready(function() {
-	var body = $('body');
-
 	checkWin();
 
-	setTimeout(shortenGallery, 900);
+	setTimeout(shortenGallery, 1050);
+	// setTimeout(testLabels, 1400);
 
 	$(window).smartresize(function() {
 		checkWin();
 
 		// if ( body.hasClass('mobile') ) {
-		if ( mobileState == true ) {
+		if ( mobileState == true || tabletState == true ) {
 			shortenGallery();
 			photoCred();
 			$('#photo-credit').hide();
@@ -106,5 +116,7 @@ $(document).ready(function() {
 });
 $(window).load(function() {
 	// console.clear();
-	shortenGallery();
+	if ( mobileState == true ) {
+		shortenGallery();
+	}
 });

@@ -14,7 +14,18 @@
 }
 #thumbrow16 .grid_1:last-child {
 	margin-left: 0;
-	clear: left;
+}
+#gallerywrap {
+	transition: all .2s ease-out;
+}
+div.ps-toolbar {
+	margin: 0;
+	/*margin-top: -22px;*/
+	transform: translateY(-50%);
+	z-index: 1000;
+}
+#PhotoSwipeTarget {
+	max-height: 100%;
 }
 /* End of Compensatory Styles */
 
@@ -24,53 +35,6 @@
 		position: relative;
 		* {
 			@include border-box;
-		}
-	}
-	#header {
-		position: relative;
-		min-width: 0px;
-		
-		#nav,
-		#nav-right {
-			margin: 0;
-		}
-
-		.colorLink {
-			position: relative;
-
-			&:after {
-				/*content: "+";*/
-				color: $wt;
-				position: absolute;
-				top: 50%;
-				right: -20px;
-				display: block;
-				transform: translateY(-50%);
-				cursor: pointer;
-
-				&:hover {
-					color: yellow;
-				}
-			}
-		}
-		a {
-			padding: 10px;
-			/*font-size: 14px;*/
-			transition: background .2s ease-out,
-				color .2s ease-out;
-		}
-		li {
-			clear: both;
-			text-align: center;
-			height: auto;
-			float: none;
-		}
-	}
-	#nav li {
-		border-bottom: 1px solid rgba(255,255,255,.2);
-
-		&:not(.colorLink) a {
-			letter-spacing: 1px;
 		}
 	}
 
@@ -89,8 +53,8 @@
 		}
 
 		div.ps-toolbar {
-			margin-top: -22px;
-			/*transform: translateY(-50%);*/
+			/*margin-top: -22px;*/
+			transform: translateY(-50%);
 		}
 
 		.ps-carousel {
@@ -134,11 +98,11 @@
 	}
 }
 @media screen and (max-width: 767px) {
-	#navHome,
+	/*#navHome,
 	#nav-right {
 		clear: both !important;
 		display: block;
-	}
+	}*/
 	#contentbox {
 		max-width: 100%;
 		
@@ -157,18 +121,18 @@
 	z-index: 1000;
 
 	text-transform: uppercase;
-  color: #FFF;
-  font-size: 10px;
-  font-family: "franklin-gothic-urw-n5","franklin-gothic-urw",sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  display: block;
-  opacity: 1;
-  left: 45px;
-  bottom: 15px;
-  position: fixed;
-  z-index: 2000;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+	color: #FFF;
+	font-size: 10px;
+	font-family: "franklin-gothic-urw-n5","franklin-gothic-urw",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	display: block;
+	opacity: 1;
+	left: 45px;
+	bottom: 15px;
+	position: fixed;
+	z-index: 2000;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 .mobile {
 	#photo-credit-mobile {

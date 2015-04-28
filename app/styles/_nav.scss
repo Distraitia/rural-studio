@@ -1,0 +1,94 @@
+/* Mobile Stylesheet */
+
+/* Compensatory Styles */
+#header a {
+	transition: background .2s ease-out,
+		color .2s ease-out;
+}
+/* End of Compensatory Styles */
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	#header {
+		position: relative;
+		min-width: 0px;
+		
+		#nav,
+		#nav-right {
+			margin: 0;
+		}
+
+		.colorLink {
+			position: relative;
+
+			&:after {
+				color: $wt;
+				position: absolute;
+				top: 50%;
+				right: -20px;
+				display: block;
+				transform: translateY(-50%);
+				cursor: pointer;
+
+				&:hover {
+					color: yellow;
+				}
+			}
+		}
+		a {
+			padding: 10px;
+			transition: background .2s ease-out,
+				color .2s ease-out;
+		}
+		li {
+			clear: both;
+			text-align: center;
+			height: auto;
+			float: none;
+		}
+	}
+	#nav li {
+		border-bottom: 1px solid rgba(255,255,255,.2);
+
+		&:not(.colorLink) a {
+			letter-spacing: 1px;
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	#navHome,
+	#nav-right {
+		clear: both !important;
+		display: block;
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+	#nav li:not(#navHome) {
+		width: calc(100% / 3);
+		float: left;
+		height: 0;
+		padding-bottom: 35px;
+		clear: none;
+		position: relative;
+
+		a {
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	#nav li:nth-child(3n) {
+		border-right: 1px solid gray;
+		border-left: 1px solid gray;
+	}
+}
+@media screen and (min-width: 1025px) {
+	#nav .colorLink {
+		margin-left: 10px;
+	}
+	#navAuburn {
+		margin-right: 10px;
+	}
+}

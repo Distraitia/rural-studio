@@ -1,6 +1,7 @@
 {
   "name": "rural-studio",
-  "root": "./",
+  "root": "./dist/",
   "clean_urls": true,
-  "error_page": "y"
+  "error_page": "y",
+  "exclude":["node_modules",".tmp"]
 }

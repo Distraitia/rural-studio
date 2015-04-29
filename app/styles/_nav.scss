@@ -61,6 +61,9 @@
 		clear: both !important;
 		display: block;
 	}
+	#header {
+		min-height: 0px;
+	}
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
 	#nav li:not(#navHome) {
@@ -90,5 +93,41 @@
 	}
 	#navAuburn {
 		margin-right: 10px;
+	}
+}
+
+/* Mobile Menu Button */
+#menuBtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 35px;
+	width: 35px;
+
+	path {
+		fill: $wt;
+	}
+
+	&:hover,
+	&.is-active {
+		background: $rs-orange;
+	}
+
+	@media screen and (min-width: 496px) {
+		display: none;
+	}
+}
+/*#header.is-mobile {
+	#nav li:not(#navHome) {
+		height: 0;
+	}
+	#menuBtn {
+		display: block;
+	}
+}*/
+@media screen and (max-width: 480px) {
+	
+	#PhotoSwipeTarget *:not(.ps-toolbar-content) {
+		width: 100% !important;
 	}
 }

@@ -35,17 +35,13 @@
 
 })($,'smartresize');
 
-// console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
-var logColor = '#eeeeff',
-	logBG = '#000',
-	logPadding = '10px',
-	logFontSize = '22px';
-
 /* script to add a mobile class if the window is under 768px wide */
 var mobileState = true,
-	taletState = true,
+	tabletState = true,
 	windowWidth = $(window).width(),
 	body = $('body');
+var menuBtnVisible,
+	menuIsOpen;
 
 var checkWin = function(){
 	if ($(this).width() != windowWidth) {
@@ -65,6 +61,16 @@ var checkWin = function(){
 		$('body').removeClass('mobile');   
 		mobileState = false;
 	}
+	if (windowWidth < 481) {
+		menuBtnVisible = true;
+		// toggleMobileMenu();
+		// $('#header').addClass('is-mobile');
+		addMobileMenu();
+	} else {
+		menuBtnVisible = false;
+		$("#header li").show();
+		// $('#header').removeClass('is-mobile');
+	}
 }
 
 /* For mobile, there's a large white space underneath the carousel image; this code shortens the gallery to match the height of the image */
@@ -77,32 +83,66 @@ function shortenGallery() {
 
 function photoCred() {
 	var credClone = $('#photo-credit').clone().attr('id','photo-credit-mobile');
-	setTimeout(function() { console.clear(); }, 1050);
+	// setTimeout(function() { console.clear(); }, 1050);
 	
 	// creates photo credit clone if it doesn't exist
 	if ($('#photo-credit-mobile').length < 1)
 		credClone.appendTo($('#PhotoSwipeTarget'));
 }
 
-function testLabels() {
-	var galleryWrap = $('.gallerypagewrap'),
-		labels = $('.container_5:not(#thumbrow1) .grid_1 a');
+function killGallery() {
+	$('#PhotoSwipeTarget').hide().remove();
+	$('#slidecaption').hide().remove();
+}
 
-	labels.each(function() {
-		$(this).append("<br>hubba hullaballoo");
-	});
+
+function addMobileMenu() {
+	var menuSVG = $('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1387 829 24 24" enable-background="new -1387 829 24 24" xml:space="preserve"> <path fill="#444444" d="M-1384,847h18v-2h-18V847z M-1384,842h18v-2h-18V842z M-1384,835v2h18v-2H-1384z"/> </svg>');
+	var menuBtnDiv = $('<a href="#" id="menuBtn"></a>');
+	var mobileMenu = menuBtnDiv.append(menuSVG);
+
+	console.clear();
+
+	if ( $('#menuBtn').length < 1 ) {
+		console.log('mobileMenu();');
+		$('#header').append(mobileMenu);
+	}
+
+	if (menuBtnVisible == true) {
+		$("#header li:not(#navHome)").hide();
+	} else {
+		$("#header li").show();
+	}
+}
+function toggleMobileMenu(e) {
+	e.preventDefault();
+	// alert('mobile menu toggled');
+	var btn = $('#menuBtn');
+
+	if ( menuIsOpen == true ) {
+		menuIsOpen = false;
+		btn.removeClass('is-active');
+		$("#header li:not(#navHome)").hide();
+	} else {
+		menuIsOpen = true;
+		btn.addClass('is-active');
+		$('#header li:not(#navHome)').show();
+	}
 }
 
 $(document).ready(function() {
 	checkWin();
 
 	setTimeout(shortenGallery, 1050);
-	// setTimeout(testLabels, 1400);
+	// setTimeout(checkWin, 400);
+
+	if ($('#Wide').length > 0) {
+		setTimeout(killGallery, 900);
+	}
 
 	$(window).smartresize(function() {
 		checkWin();
 
-		// if ( body.hasClass('mobile') ) {
 		if ( mobileState == true || tabletState == true ) {
 			shortenGallery();
 			photoCred();
@@ -112,7 +152,13 @@ $(document).ready(function() {
 			$('#photo-credit').show();
 			$('#photo-credit-mobile').hide();
 		}
+
+		if ( mobileState == true ) {
+			addMobileMenu();
+		}
 	});
+
+	$('#menuBtn').on('click', toggleMobileMenu);
 });
 $(window).load(function() {
 	// console.clear();

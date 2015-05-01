@@ -391,20 +391,16 @@
 			 */
 			add: function(obj, type, handler){
 				
-				$(obj).bind(type, handler);
-				
+				$(obj).bind(type, handler);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: remove
 			 * Removes a handler or all handlers associated with a type
 			 */
 			remove: function(obj, type, handler){
 				
-				$(obj).unbind(type, handler);
-				
+				$(obj).unbind(type, handler);				
 			},
 			
 			
@@ -425,8 +421,7 @@
 					event = type;
 				}
 				
-				$(obj).trigger( $.Event(event.type, event),  args);
-				
+				$(obj).trigger( $.Event(event.type, event),  args);				
 			},
 			
 			
@@ -440,8 +435,7 @@
 					y: event.pageY
 				};
 				
-				return retval;
-				
+				return retval;				
 			},
 			
 			
@@ -450,12 +444,9 @@
 			 */
 			getTouchEvent: function(event){
 				
-				return event.originalEvent;
-				
+				return event.originalEvent;				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: getWheelDelta
 			 */
@@ -470,8 +461,7 @@
 					delta = -event.detail / 3;
 				}
 				
-				return delta;
-				
+				return delta;				
 			},
 			
 			
@@ -480,8 +470,7 @@
 			 */
 			domReady: function(handler){
 				
-				$(document).ready(handler);
-				
+				$(document).ready(handler);				
 			}
 			
 			
@@ -511,8 +500,7 @@
 			/*
 			 * Function: setData
 			 */
-			setData: function(el, key, value){
-				
+			setData: function(el, key, value){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -529,25 +517,19 @@
 				Util.DOM.setAttribute(el, 'data-' + key, value);
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: getData
 			 */
 			getData: function(el, key, defaultValue){
 				
-				return Util.DOM.getAttribute(el, 'data-' + key, defaultValue);
-				
+				return Util.DOM.getAttribute(el, 'data-' + key, defaultValue);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: removeData
 			 */
-			removeData: function(el, key){
-				
+			removeData: function(el, key){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -561,12 +543,9 @@
 			},
 			_removeData: function(el, key){
 			
-				Util.DOM.removeAttribute(el, 'data-' + key);
-				
+				Util.DOM.removeAttribute(el, 'data-' + key);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: isChildOf
 			 */
@@ -582,9 +561,7 @@
 
 				return childEl === parentEl;
 			},
-			
-			
-			
+									
 			/*
 			 * Function: find
 			 */
@@ -614,67 +591,49 @@
 				retval.attr(attributes);
 				retval.append(content);
 				
-				return retval[0];
-				
+				return retval[0];				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: appendChild
 			 */
 			appendChild: function(childEl, parentEl){
 				
-				$(parentEl).append(childEl);
-				
+				$(parentEl).append(childEl);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: insertBefore
 			 */
 			insertBefore: function(newEl, refEl, parentEl){
 				
-				$(newEl).insertBefore(refEl);
-				
+				$(newEl).insertBefore(refEl);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: appendText
 			 */
 			appendText: function(text, parentEl){
 				
-				$(parentEl).text(text);
-				
+				$(parentEl).text(text);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: appendToBody
 			 */
 			appendToBody: function(childEl){
 				
-				$('body').append(childEl);
-				
+				$('body').append(childEl);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: removeChild
 			 */
 			removeChild: function(childEl, parentEl){
 				
-				$(childEl).empty().remove();
-				
+				$(childEl).empty().remove();				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: removeChildren
 			 */
@@ -683,9 +642,7 @@
 				$(parentEl).empty();
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: hasAttribute
 			 */
@@ -694,9 +651,7 @@
 				return !Util.isNothing( $(el).attr(attributeName) );
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: getAttribute
 			 */
@@ -709,14 +664,11 @@
 				return retval;
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: el, attributeName
 			 */
-			setAttribute: function(el, attributeName, value){
-				
+			setAttribute: function(el, attributeName, value){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -725,22 +677,17 @@
 				}
 				else{
 					Util.DOM._setAttribute(el, attributeName, value);
-				}
-					
+				}					
 			},
 			_setAttribute: function(el, attributeName, value){
 				
-				$(el).attr(attributeName, value);
-				
+				$(el).attr(attributeName, value);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: removeAttribute
 			 */
-			removeAttribute: function(el, attributeName){
-				
+			removeAttribute: function(el, attributeName){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -754,17 +701,13 @@
 			},
 			_removeAttribute: function(el, attributeName){
 				
-				$(el).removeAttr(attributeName);
-				
+				$(el).removeAttr(attributeName);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: addClass
 			 */
-			addClass: function(el, className){
-				
+			addClass: function(el, className){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -778,17 +721,13 @@
 			},
 			_addClass: function(el, className){
 				
-				$(el).addClass(className);
-				
+				$(el).addClass(className);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: removeClass
 			 */
-			removeClass: function(el, className){
-				
+			removeClass: function(el, className){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -797,33 +736,25 @@
 				}
 				else{
 					Util.DOM._removeClass(el, className);
-				}
-					
+				}					
 			},
 			_removeClass: function(el, className){
 			
-				$(el).removeClass(className);
-				
+				$(el).removeClass(className);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: hasClass
 			 */
 			hasClass: function(el, className){
 				
-				$(el).hasClass(className);
-				
+				$(el).hasClass(className);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: setStyle
 			 */
-			setStyle: function(el, style, value){
-				
+			setStyle: function(el, style, value){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -859,20 +790,15 @@
 				}
 				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: getStyle
 			 */
 			getStyle: function(el, styleName){
 				
-				return $(el).css(styleName);
-				
+				return $(el).css(styleName);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: hide
 			 */
@@ -892,14 +818,11 @@
 				$(el).hide();
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: show
 			 */
-			show: function(el){
-				
+			show: function(el){				
 				if (Util.isLikeArray(el)){
 					var i, len;
 					for (i=0, len=el.length; i<len; i++){
@@ -913,28 +836,21 @@
 			},
 			_show: function(el){
 				
-				$(el).show();
-				
+				$(el).show();				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: width 
 			 * Content width, exludes padding
 			 */
-			width: function(el, value){
-				
+			width: function(el, value){				
 				if (!Util.isNothing(value)){
 					$(el).width(value);
 				}
 				
-				return $(el).width();
-				
+				return $(el).width();				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: outerWidth
 			 */
@@ -943,43 +859,33 @@
 				return $(el).outerWidth();
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: height 
 			 * Content height, excludes padding
 			 */
-			height: function(el, value){
-				
+			height: function(el, value){				
 				if (!Util.isNothing(value)){
 					$(el).height(value);
 				}
 				
-				return $(el).height();
-				
+				return $(el).height();				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: outerHeight
 			 */
 			outerHeight: function(el){
 				
-				return $(el).outerHeight();
-				
+				return $(el).outerHeight();				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: documentWidth
 			 */
 			documentWidth: function(){
 				
-				return $(document.documentElement).width();
-				
+				return $(document.documentElement).width();				
 			},
 
 			
@@ -989,19 +895,15 @@
 			 */
 			documentHeight: function(){
 				
-				return $(document.documentElement).height();
-				
+				return $(document.documentElement).height();				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: documentOuterWidth
 			 */
 			documentOuterWidth: function(){
 				
-				return Util.DOM.width(document.documentElement);
-				
+				return Util.DOM.width(document.documentElement);				
 			},
 
 			
@@ -1011,12 +913,9 @@
 			 */
 			documentOuterHeight: function(){
 				
-				return Util.DOM.outerHeight(document.documentElement);
-				
+				return Util.DOM.outerHeight(document.documentElement);				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: bodyWidth
 			 */
@@ -1025,9 +924,7 @@
 				return $(document.body).width();
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: bodyHeight
 			 */
@@ -1036,9 +933,7 @@
 				return $(document.body).height();
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: bodyOuterWidth
 			 */
@@ -1047,9 +942,7 @@
 				return Util.DOM.outerWidth(document.body);
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: bodyOuterHeight
 			 */
@@ -1058,9 +951,7 @@
 				return Util.DOM.outerHeight(document.body);
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: windowWidth
 			 */
@@ -1072,9 +963,7 @@
 				//w3c
 				return window.innerWidth;
 			},
-			
-			
-			
+									
 			/*
 			 * Function: windowHeight
 			 */
@@ -1086,9 +975,7 @@
 				//w3c
 				return window.innerHeight;
 			},
-			
-			
-			
+									
 			/*
 			 * Function: windowScrollLeft
 			 */
@@ -1100,9 +987,7 @@
 				//w3c
 				return window.pageXOffset;
 			},
-			
-			
-			
+									
 			/*
 			 * Function: windowScrollTop
 			 */
@@ -1160,14 +1045,11 @@
 				return this._transitionEndHandler;
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: stop
 			 */
-			stop: function(el){
-				
+			stop: function(el){				
 				if (Util.Browser.isCSSTransformSupported){
 					var 
 						property = el.style[this._transitionPrefix + 'Property'],
@@ -1195,9 +1077,7 @@
 				
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: fadeIn
 			 */
@@ -1230,23 +1110,18 @@
 				}
 				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: fadeTo
 			 */
 			fadeTo: function(el, opacity, speed, callback, timingFunction){
 				this.fadeIn(el, speed, callback, timingFunction, opacity);
 			},
-			
-			
-			
+									
 			/*
 			 * Function: fadeOut
 			 */
-			fadeOut: function(el, speed, callback, timingFunction){
-				
+			fadeOut: function(el, speed, callback, timingFunction){				
 				if (speed <= 0){
 					Util.DOM.setStyle(el, 'opacity', 0);
 					if (!Util.isNothing(callback)){
@@ -1267,9 +1142,7 @@
 				}
 				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: slideBy
 			 */
@@ -1311,9 +1184,7 @@
 				}
 				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: 
 			 */
@@ -1324,9 +1195,7 @@
 				Util.DOM.setStyle(el, style);
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: _applyTransition
 			 */
@@ -1354,9 +1223,7 @@
 				}, this._applyTransitionDelay);	
 				
 			},
-			
-			
-			
+									
 			/*
 			 * Function: _onTransitionEnd
 			 */
@@ -1366,9 +1233,7 @@
 				this._leaveTransforms(e.currentTarget);
 			
 			},
-			
-			
-			
+									
 			/*
 			 * Function: _leaveTransforms
 			 */
@@ -1427,8 +1292,7 @@
 						callback(el);
 					}
 					
-				}.bind(this), this._applyTransitionDelay);
-				
+				}.bind(this), this._applyTransitionDelay);				
 			}
 			
 			
@@ -1725,8 +1589,7 @@
 					targetEl: e.target,
 					currentTargetEl: e.currentTarget
 				});
-				return;
-				
+				return;				
 			}
 			
 			if (Util.isNothing(this.doubleTapTimeout)){
@@ -1746,8 +1609,7 @@
 					
 				}.bind(this), this.doubleTapSpeed);
 				
-				return;
-				
+				return;				
 			}
 			else{
 				
@@ -1761,8 +1623,7 @@
 					action: Util.TouchElement.ActionTypes.doubleTap,
 					targetEl: e.target,
 					currentTargetEl: e.currentTarget
-				});
-				
+				});				
 			}
 			
 		},
@@ -2178,8 +2039,7 @@
 			
 			this.imageEl.originalSrc = Util.coalesce(this.imageEl.originalSrc, '');
 			
-			if (this.imageEl.originalSrc === this.src){
-				
+			if (this.imageEl.originalSrc === this.src){				
 				if (this.imageEl.isError){
 					Util.Events.fire(this, {
 						type: PhotoSwipe.Image.EventTypes.onError,
@@ -2420,8 +2280,7 @@
 				caption = this.settings.getImageCaption(image);
 				metaData = this.settings.getImageMetaData(image);
 				
-				this.images.push(new PhotoSwipe.Image.ImageClass(image, src, caption, metaData));
-				
+				this.images.push(new PhotoSwipe.Image.ImageClass(image, src, caption, metaData));				
 			}
 			
 			
@@ -2603,8 +2462,7 @@
 				
 				width = Util.DOM.width(this.settings.target);
 				height = Util.DOM.height(this.settings.target);
-				top = '0px';
-				
+				top = '0px';				
 			}
 			
 			Util.DOM.setStyle(this.el, {
@@ -2833,8 +2691,7 @@
 					});
 				}
 				
-				Util.DOM.appendChild(itemEl, this.contentEl);
-				
+				Util.DOM.appendChild(itemEl, this.contentEl);				
 			}
 			
 			
@@ -2949,8 +2806,7 @@
 				}
 				
 			}
-			else{
-				
+			else{				
 				if (imageEl.isLandscape) {
 					// Ensure the width fits the screen
 					scale = maxWidth / imageEl.naturalWidth;
@@ -3063,8 +2919,7 @@
 			if (this.settings.loop){
 				left = (width + this.settings.margin) * -1;
 			}
-			else{
-				
+			else{				
 				if (this.currentCacheIndex === this.cache.images.length-1){
 					left = ((itemEls.length-1) * (width + this.settings.margin)) * -1;
 				}
@@ -3125,8 +2980,7 @@
 			//kevin
 			//console.log("setImages "+this.cache.images.length);
 			
-			if (this.settings.loop){
-				
+			if (this.settings.loop){				
 				if (nextCacheIndex > this.cache.images.length-1){
 					nextCacheIndex = 0;
 				}
@@ -3147,8 +3001,7 @@
 				// Next
 				this.addCacheImageToItemEl(cacheImages[2], itemEls[2]);
 				// Previous
-				this.addCacheImageToItemEl(cacheImages[0], itemEls[0]);
-				
+				this.addCacheImageToItemEl(cacheImages[0], itemEls[0]);				
 			}
 			else{
 				
@@ -3584,8 +3437,7 @@
 				this.currentCacheIndex = this.currentCacheIndex - 1;
 			}
 			
-			if (this.settings.loop){
-				
+			if (this.settings.loop){				
 				if (this.lastSlideByAction === PhotoSwipe.Carousel.SlideByAction.next){
 					// Move first to the last
 					Util.DOM.appendChild(itemEls[0], this.contentEl);
@@ -3603,8 +3455,7 @@
 				}
 				
 			}
-			else{
-				
+			else{				
 				if (this.cache.images.length > 3){
 					
 					if (this.currentCacheIndex > 1 && this.currentCacheIndex < this.cache.images.length-2){
@@ -3649,8 +3500,7 @@
 			});
 			
 			
-			if (this.isSlideshowActive){
-				
+			if (this.isSlideshowActive){				
 				if (this.lastSlideByAction !== PhotoSwipe.Carousel.SlideByAction.current){
 					this.startSlideshow();
 				}
@@ -3809,8 +3659,7 @@
 			else if (!Util.isNothing(window.jQuery)){
 				
 				
-				window.jQuery(this.contentEl).stop().css('left', this.getStartingPos().x + xVal + 'px');
-				
+				window.jQuery(this.contentEl).stop().css('left', this.getStartingPos().x + xVal + 'px');				
 			}
 			
 		},
@@ -3827,8 +3676,7 @@
 			if (speed <= 0){
 				
 				this.slideByEndHandler();
-				return;
-				
+				return;				
 			}
 			
 			
@@ -3844,8 +3692,7 @@
 					return;
 				}
 				
-				Util.Animation.slideBy(this.contentEl, xVal, 0, speed, this.slideByEndHandler, this.settings.slideTimingFunction);
-				
+				Util.Animation.slideBy(this.contentEl, xVal, 0, speed, this.slideByEndHandler, this.settings.slideTimingFunction);				
 			}
 			else if (!Util.isNothing(window.jQuery)){
 				
@@ -6034,8 +5881,7 @@
 				// Set the preventDefaultTouchEvents back to it was
 				this.uiLayer.captureSettings.preventDefaultTouchEvents = this.settings.preventDefaultTouchEvents;
 				
-				Util.Events.fire(this, PhotoSwipe.EventTypes.onZoomPanRotateHide);
-				
+				Util.Events.fire(this, PhotoSwipe.EventTypes.onZoomPanRotateHide);				
 			}
 		
 		},
@@ -6136,8 +5982,7 @@
 					target: this
 				});
 			
-				this.setUIWebViewResetPositionTimeout();
-				
+				this.setUIWebViewResetPositionTimeout();				
 			}.bind(this), 250);
 			
 			
@@ -6165,8 +6010,7 @@
 				
 				this.resetPosition();
 				
-				this.setUIWebViewResetPositionTimeout();
-				
+				this.setUIWebViewResetPositionTimeout();				
 			}.bind(this), this.settings.uiWebViewResetPositionDelay);
 			
 		},

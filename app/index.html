@@ -50,13 +50,13 @@
 			<li id="navAuburn"><a href="http://www.auburn.edu/">AUBURN UNIVERSITY</a></li>
 		</ul>
 	</div>
-
 <script>    	
 var BCWebAppProject = {};
 
 BCWebAppProject.homeimage = {
 //random image 
-"image":"/project-images/20Kv8-daves-house/2009_20Kv8_TH_96977c3.jpg", "title":"Image: Timothy Hursley | Project: 20K v8 Dave's House"
+"image":"/project-images/20Kv8-daves-house/2009_20Kv8_TH_96977c3.jpg", 
+"title":"Image: Timothy Hursley | Project: 20K v8 Dave's House"
 }
 
 BCWebAppProject.allpageslist =
@@ -600,9 +600,10 @@ var currentImage = instance.getCurrentImage();
 
 //CREDITING
 if(currentImage.metaData.photocredit){
-//if there is a photo credit, display it
-$('#photo-credit').html(currentImage.metaData.photocredit);
-$('#photo-credit').fadeIn();							
+	//if there is a photo credit, display it
+	$('#photo-credit').html(currentImage.metaData.photocredit);
+	$('#photo-credit').fadeIn();
+	var creditClone = $('#photo-credit').clone().attr('id','photo-credit-mobile').appendTo($('#PhotoSwipeTarget'));						
 }
 
 //CAPTIONING

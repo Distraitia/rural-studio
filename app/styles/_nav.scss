@@ -80,11 +80,24 @@
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
 		}
 	}
 	#nav li:nth-child(3n) {
 		border-right: 1px solid gray;
 		border-left: 1px solid gray;
+	}
+	#nav li:nth-child(3n + 2) {
+		background: pink !important;
+		clear: left;
+	}
+	#nav li:not(#navHome):nth-child(3n + 1) {
+		background: teal !important;
+		clear: right;
+	}
+	#nav,
+	#nav * {
+		box-sizing: border-box;
 	}
 }
 @media screen and (min-width: 1025px) {

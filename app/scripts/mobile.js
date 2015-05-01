@@ -80,6 +80,10 @@ function shortenGallery() {
 	
 	gallery.height(imgHeight);
 }
+function killGallery() {
+	$('#PhotoSwipeTarget').hide().remove();
+	$('#slidecaption').hide().remove();
+}
 
 function photoCred() {
 	var credClone = $('#photo-credit').clone().attr('id','photo-credit-mobile');
@@ -88,11 +92,6 @@ function photoCred() {
 	// creates photo credit clone if it doesn't exist
 	if ($('#photo-credit-mobile').length < 1)
 		credClone.appendTo($('#PhotoSwipeTarget'));
-}
-
-function killGallery() {
-	$('#PhotoSwipeTarget').hide().remove();
-	$('#slidecaption').hide().remove();
 }
 
 
@@ -143,25 +142,52 @@ $(document).ready(function() {
 	$(window).smartresize(function() {
 		checkWin();
 
+		if ( mobileState == true ) {
+			addMobileMenu();
+		}
 		if ( mobileState == true || tabletState == true ) {
 			shortenGallery();
-			photoCred();
+			// photoCred();
 			$('#photo-credit').hide();
-			$('#photo-credit-mobile').show();
+			// setTimeout(function() {$('#photo-credit-mobile').css('opacity','1').show();},400);
 		} else {
 			$('#photo-credit').show();
 			$('#photo-credit-mobile').hide();
 		}
 
-		if ( mobileState == true ) {
-			addMobileMenu();
-		}
+		// if ( mobileState == true ) {
+		// 	addMobileMenu();
+		// }
 	});
 
 	$('#menuBtn').on('click', toggleMobileMenu);
 });
 $(window).load(function() {
 	// console.clear();
+	var windowWidth = $(window).width();
+	addMobileMenu();
+
+	// var credit = $('#photo-credit'),
+	// 	imgCreditExists = false;
+
+	// function imgCredit() {
+	// 	var length = credit.html().length;
+
+	// 	if (length < 1 ) {
+	// 		console.log('no dice');
+	// 		setTimeout(imgCredit, 150);
+	// 	} else {
+	// 		console.log('Yay! ' + length);
+	// 		imgCreditExists = true;
+	// 	}
+
+	// 	if (imgCreditExists == true) {
+	// 		// console.log(credit.html());
+	// 		// var creditClone = credit.clone().attr('id','photo-credit-mobile');
+	// 	}
+	// }
+	// imgCredit();
+
 	if ( mobileState == true ) {
 		shortenGallery();
 	}

@@ -36,10 +36,8 @@
 })($,'smartresize');
 
 /* script to add a mobile class if the window is under 768px wide */
-var mobileState = true,
-	tabletState = true,
-	windowWidth = $(window).width(),
-	body = $('body');
+var mobileState,
+	windowWidth = $(window).width();
 var menuBtnVisible,
 	menuIsOpen;
 
@@ -47,13 +45,7 @@ var checkWin = function(){
 	if ($(this).width() != windowWidth) {
 		windowWidth = $(this).width();       
 	}
-	if (windowWidth < 1025) {
-		$('body').addClass('tablet-B');   
-		tabletState = true;
-	} else {
-		$('body').removeClass('tablet-B');   
-		tabletState = false;
-	}
+	
 	if (windowWidth < 768) {
 		$('body').addClass('mobile');   
 		mobileState = true;
@@ -63,13 +55,9 @@ var checkWin = function(){
 	}
 	if (windowWidth < 481) {
 		menuBtnVisible = true;
-		// toggleMobileMenu();
-		// $('#header').addClass('is-mobile');
-		addMobileMenu();
 	} else {
 		menuBtnVisible = false;
 		$("#header li").show();
-		// $('#header').removeClass('is-mobile');
 	}
 }
 
@@ -83,6 +71,7 @@ function shortenGallery() {
 function killGallery() {
 	$('#PhotoSwipeTarget').hide().remove();
 	$('#slidecaption').hide().remove();
+	$('#photo-credit').hide().remove();
 }
 
 function photoCred() {
@@ -94,19 +83,44 @@ function photoCred() {
 		credClone.appendTo($('#PhotoSwipeTarget'));
 }
 
+var isGalleryPage;
 
-function addMobileMenu() {
+function determinePageType() {
+	if ( $('#PhotoSwipeTarget').length < 1 ) {
+		isGalleryPage = false;
+		// console.log('This is a listing page.');
+	} else if ( $('#PhotoSwipeTarget').length > 0 && $('#Wide').length > 0) {
+		isGalleryPage = false;
+		// console.log('This is the anniversary page.');
+	} else if ( $('#PhotoSwipeTarget').length > 0 && $('#Wide').length < 1 ) {
+		isGalleryPage = true;
+		// console.log('This is a gallery page.');
+	}
+}
+function addMobileMenuBtn() {
 	var menuSVG = $('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1387 829 24 24" enable-background="new -1387 829 24 24" xml:space="preserve"> <path fill="#444444" d="M-1384,847h18v-2h-18V847z M-1384,842h18v-2h-18V842z M-1384,835v2h18v-2H-1384z"/> </svg>');
 	var menuBtnDiv = $('<a href="#" id="menuBtn"></a>');
 	var mobileMenu = menuBtnDiv.append(menuSVG);
 
+	menuIsOpen = false;
+
 	console.clear();
 
 	if ( $('#menuBtn').length < 1 ) {
-		console.log('mobileMenu();');
+		console.log('addMobileMenuBtn();');
 		$('#header').append(mobileMenu);
 	}
+}
+function mobileImgCredit() {
+	// var credClone = $('#photo-credit').clone().attr('id','photo-credit-mobile');
+	
+	// if ($('#photo-credit-mobile').length < 1) {
+		var credClone = $('#photo-credit').clone().attr('id','photo-credit-mobile');
+		credClone.appendTo($('#PhotoSwipeTarget'));
+	// }
+}
 
+function addMobileMenu() {
 	if (menuBtnVisible == true) {
 		$("#header li:not(#navHome)").hide();
 	} else {
@@ -116,77 +130,52 @@ function addMobileMenu() {
 function toggleMobileMenu(e) {
 	e.preventDefault();
 	// alert('mobile menu toggled');
-	var btn = $('#menuBtn');
+	var btn = $('#menuBtn'),
+		header = $('#header');
 
 	if ( menuIsOpen == true ) {
 		menuIsOpen = false;
-		btn.removeClass('is-active');
+		header.removeClass('is-open');
 		$("#header li:not(#navHome)").hide();
 	} else {
 		menuIsOpen = true;
-		btn.addClass('is-active');
+		header.addClass('is-open');
 		$('#header li:not(#navHome)').show();
 	}
 }
 
 $(document).ready(function() {
+	addMobileMenuBtn();
+	determinePageType();
 	checkWin();
 
 	setTimeout(shortenGallery, 1050);
-	// setTimeout(checkWin, 400);
 
-	if ($('#Wide').length > 0) {
+	if ( isGalleryPage == false ) {
 		setTimeout(killGallery, 900);
 	}
 
 	$(window).smartresize(function() {
 		checkWin();
-
+		
 		if ( mobileState == true ) {
-			addMobileMenu();
-		}
-		if ( mobileState == true || tabletState == true ) {
 			shortenGallery();
-			// photoCred();
 			$('#photo-credit').hide();
-			// setTimeout(function() {$('#photo-credit-mobile').css('opacity','1').show();},400);
 		} else {
 			$('#photo-credit').show();
 			$('#photo-credit-mobile').hide();
 		}
-
-		// if ( mobileState == true ) {
-		// 	addMobileMenu();
-		// }
 	});
 
 	$('#menuBtn').on('click', toggleMobileMenu);
 });
 $(window).load(function() {
-	// console.clear();
 	var windowWidth = $(window).width();
-	addMobileMenu();
 
-	// var credit = $('#photo-credit'),
-	// 	imgCreditExists = false;
-
-	// function imgCredit() {
-	// 	var length = credit.html().length;
-
-	// 	if (length < 1 ) {
-	// 		console.log('no dice');
-	// 		setTimeout(imgCredit, 150);
-	// 	} else {
-	// 		console.log('Yay! ' + length);
-	// 		imgCreditExists = true;
-	// 	}
-
-	// 	if (imgCreditExists == true) {
-	// 		// console.log(credit.html());
-	// 		// var creditClone = credit.clone().attr('id','photo-credit-mobile');
-	// 	}
-	// }
-	// imgCredit();
+	if ( isGalleryPage == true ) {
+		// mobileImgCredit();
+		// setTimeout(mobileImgCredit, 500);
+	}
 
 	if ( mobileState == true ) {
 		shortenGallery();

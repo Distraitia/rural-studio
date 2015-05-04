@@ -22,10 +22,19 @@
 @media screen and (max-width: 480px) {
 	
 }
-body.gallerypagewrap.mobile {
+
+/*body.gallerypagewrap.mobile {
 	background: #a39d98 url("../images/rural-texture.jpg");
+}*/
+body.gallerypagewrap {
+	background: #a39d98 url("../images/rural-texture.jpg");
+
+	#gallerywrap {
+		background: $wt;
+	}
 }
-.tablet-B {
+
+@media screen and (max-width: 1024px) {
 	#title {
 		display: none;
 	}
@@ -35,13 +44,11 @@ body.gallerypagewrap.mobile {
 	.container_5 {
 		min-width: 0px;
 	}
-	&:not(.mobile) {
+	@media screen and (min-width: 768px) {
 		#gallerywrap {
-			padding: 36px 16px;
+			padding: 32px 16px;
 		}
 		.container_5 {
-			/*margin-bottom: 20px;*/
-
 			a {
 				height: 52px;
 			}
@@ -51,7 +58,7 @@ body.gallerypagewrap.mobile {
 		}
 	}
 }
-.mobile {
+@media screen and (max-width: 767px) {
 	#gallerywrap {
 		.grid_1 {
 			margin: 0;
@@ -96,7 +103,7 @@ body.gallerypagewrap.mobile {
 	}
 	@media screen and (max-width: 540px) {
 		#gallerywrap .grid_1 {
-			/*padding: 0 10px 15px;*/
+			// padding: 0 10px 15px;
 
 			img {
 				margin-bottom: 5px;
@@ -110,11 +117,9 @@ body.gallerypagewrap.mobile {
 		}
 	}
 }
-body:not(.mobile) {
+@media screen and (min-width: 768px) {
 	.container_5 {
-		margin-bottom: 20px;
 		margin: 0;
-		margin-bottom: 0;
 
 		& + .container_5 {
 			margin-top: 20px;
@@ -138,5 +143,14 @@ body:not(.mobile) {
 	}
 	#thumbrow16 .grid_1 {
 		padding-bottom: 40px;
+	}
+}
+@media screen and (min-width: 1025px) {
+	.gallerypagewrap #title {
+		margin: 0;
+		height: 55px;
+	}
+	.gallery-wrap {
+		padding: 45px;
 	}
 }
